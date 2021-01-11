@@ -1,0 +1,72 @@
+@import '../../base/variables';
+
+.feature {
+    transition: all 0.5s ease-in-out;
+    
+}
+
+.feature__description {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.25rem;
+    max-width: $mobileWidth;
+}
+
+.feature__background {
+    z-index: -1;
+    position: absolute;
+    left: -3rem;
+    bottom: -1.5rem;
+    max-width: 95%;
+    transform: rotate(180deg);
+}
+
+.feature__illustration-container {
+    position: relative;
+    margin-top: 2.5rem;
+    margin-bottom: 4rem;
+    grid-area: illustration;
+}
+
+.feature__image {
+    max-width: 100%;
+}
+
+.feature--inactive {
+    height: 0px;
+    opacity: 0;
+}
+
+.feature__details {
+    grid-area: details;
+}
+
+.feature__button {
+    display: none;
+}
+
+@media (min-width: $mediumWidth) {
+    .feature {
+        margin-top: 3rem;
+        align-items: center;
+        grid-area: feature;
+        display: grid;
+        grid-template-areas: 
+            'illustration details';
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .feature__details {
+        text-align: left;
+        margin-left: 6rem;
+    }
+
+    .feature__description {
+        margin-left: 0;
+    }
+
+    .feature__button {
+        display: inline-block;
+    }
+}

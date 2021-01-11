@@ -1,0 +1,33 @@
+{ 
+    "sections": [
+        {
+            "id": 1,
+            "name": "Features",
+            "url": "#features"
+        },
+        {
+            "id": 2,
+            "name": "Pricing",
+            "url": "#pricing"
+        },
+        {
+            "id": 3,
+            "name": "Contact",
+            "url": "#newsletter"
+        }
+    ],
+    "socialLinks": [
+        {
+            "id": 1,
+            "url": "/",
+            "iconUrl": "facebookIcon",
+            "platform": "Facebook"
+        },
+        {
+            "id": 2,
+            "url": "/",
+            "iconUrl": "twitterIcon",
+            "platform": "Twitter"
+        }
+    ]
+}

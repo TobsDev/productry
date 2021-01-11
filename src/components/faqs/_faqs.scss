@@ -1,0 +1,20 @@
+@import '../../base/variables';
+
+.faqs {
+    grid-area: faqs;
+}
+
+.faqs__description {
+    padding-bottom: 2.5rem;
+    @include mobile-max-width;
+}
+
+.faqs__viewport {
+    @include mobile-section-setting;
+    padding-bottom: 6.5rem;
+}
+
+.faqs__modal-list {
+    padding-bottom: 2rem;
+    @include mobile-max-width;
+}

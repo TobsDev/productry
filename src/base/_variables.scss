@@ -1,0 +1,30 @@
+$mobileWidth: 30rem;
+$mediumWidth: 760px;
+$desktopViewport: 1170px;
+
+@mixin mobile-section-setting {
+    width: 100vw;
+    padding: 0rem 1.5rem 1.5rem;
+}
+
+@mixin desktop-section-setting {
+    width: 100vw;
+    max-width: $desktopViewport;
+}
+
+$md-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+@mixin spacing {
+    letter-spacing: 0.2rem;
+}
+
+@mixin mobile-max-width {
+    max-width: $mobileWidth;
+    margin: 0 auto;
+}
+
+@mixin medium-max-width {
+    max-width: $mediumWidth;
+    min-width: calc(#{$mediumWidth} - 30px);
+    margin: 0 auto;
+}

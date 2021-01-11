@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Chrome",
+        "minVersion": 62,
+        "linkUrl": "/"
+    },
+    {
+        "id": 2,
+        "name": "Firefox",
+        "minVersion": 55,
+        "linkUrl": "/"
+    },
+    {
+        "id": 3,
+        "name": "Opera",
+        "minVersion": 46,
+        "linkUrl": "/"
+    }
+]

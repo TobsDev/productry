@@ -1,0 +1,121 @@
+@import '../../base/variables';
+@import '../../base/colors';
+
+
+.hero {
+    overflow: hidden;
+    grid-area: hero;
+}
+
+.hero__viewport {
+    @include mobile-section-setting;
+}
+
+.hero__claim-container {
+    grid-area: claim;
+}
+
+.hero__illustrationContainer {
+    position: relative;
+    margin-top: 2.5rem;
+    margin-bottom: 4rem;
+    grid-area: illustration;
+}
+
+.hero__image {
+    max-width: 100%;
+    
+}
+
+.hero__background {
+    z-index: -1; 
+    position: absolute;
+    right: -3rem;
+    bottom: -1.5rem;
+    max-width: 540px;
+    grid-area: hero;
+}
+
+.hero__headline {
+    line-height: 2.5rem;
+    margin-bottom: 1.25rem;
+    text-transform: capitalize;
+}
+
+.hero__claim {
+    max-width: $mobileWidth;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.25rem;
+    grid-area: claim;
+}
+
+.hero__button--secondary {
+    background-color: $light-gray !important;
+    color: $very-dark-blue !important;
+}
+
+.hero__buttons {
+    max-width: $mobileWidth;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 7rem;
+    display: grid;
+    grid-template: 'button1 button2';
+    grid-gap: 1rem;
+}
+
+.hero__button1 {
+    grid-area: button1;
+}
+
+.hero__button2 {
+    grid-area: button2;
+}
+
+@media (min-width: $mediumWidth) {
+    .hero {
+        margin: auto;
+    }
+
+    .hero__viewport {
+        @include desktop-section-setting;
+        padding-top: 4rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+            'claim illustration';
+        
+        align-items: center;
+    }
+
+    .hero__claim-container {
+        text-align: left;
+    }
+
+    .hero__claim {
+        margin-left: 0;
+    }
+
+    .hero__buttons {
+        margin: 0;
+        display: flex;
+    }
+
+    .hero__button {
+        padding: 0.6rem 1.5rem;
+        margin-right: 1.5rem;
+    }
+
+    .hero__background {
+        z-index: -1;
+        position: absolute;
+        right: -41rem;
+        bottom: -1.5rem;
+        max-height: 18rem;
+    }
+
+    .hero__illustrationContainer {
+        margin: 0 auto;
+    }
+}

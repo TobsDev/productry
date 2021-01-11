@@ -1,0 +1,29 @@
+@import '../../base/variables';
+
+.downloads {
+    padding-bottom: 6.5rem;
+    grid-area: downloads;
+    margin: auto;
+}
+
+.downloads__viewport {
+    @include mobile-section-setting;
+}
+
+.downloads__description {
+    padding-bottom: 1.5rem;
+    @include mobile-max-width;
+}
+
+@media (min-width: calc(#{$mediumWidth} + 150px)) {
+    .downloads__list {
+        display: flex;
+        
+    }
+
+    .downloads__viewport {
+        @include desktop-section-setting;
+        align-items: center;
+        max-width: 980px;
+    }
+}

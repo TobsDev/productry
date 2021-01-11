@@ -1,0 +1,39 @@
+@import '../../base/variables';
+
+.downloadCard {
+    width: 100%;
+    padding: 3rem 1.5rem 1.5rem 1.5rem;
+    box-shadow: $md-box-shadow;
+    border-radius: 1rem;
+    position: relative;
+    @include mobile-max-width;
+}
+
+.downloadCard__button {
+    width: 100%;
+}
+
+.downloadCard__title {
+    font-size: 1.125rem;
+}
+
+.downloadCard__logo {
+    margin-bottom: 2rem;
+}
+
+.downloadCard__version {
+    margin-bottom: 3rem;
+}
+
+.downloadCard__line {
+    position: absolute;
+    bottom: 5rem;
+    left: 0;
+    width: 100%;
+}
+
+@media (min-width: $mediumWidth) {
+    .downloadCard {
+        max-width: 280px;
+    }
+}

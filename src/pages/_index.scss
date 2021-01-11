@@ -1,0 +1,22 @@
+@import '../base/variables';
+
+.indexPage {
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media (min-width: $mediumWidth) {
+    .indexPage {
+        display: grid;
+        margin: 0 auto;
+        grid-template-areas: 
+            'header'
+            'hero'
+            'features'
+            'downloads'
+            'faqs'
+            'newsletter'
+            'footer';
+        overflow: hidden;
+    }
+}

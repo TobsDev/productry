@@ -1,0 +1,65 @@
+@import '../../base/variables';
+
+.question__head {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2rem;
+    justify-content: space-between;
+    position: relative;
+    max-width: $mobileWidth;
+    cursor: pointer;
+}
+
+.question__title {
+    margin-bottom: 0;
+    pointer-events: none;
+}
+
+.question__arrow {
+    height: 100%;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+.question__head::after  {
+    content: '';
+    background-color: transparentize(black, 0.8);
+    padding: 0;
+    display: block;
+    position: absolute;
+    bottom: -0.8rem;
+    left: 0;
+    right: 0;
+    @include mobile-max-width;
+    height: 1px;
+}
+
+.question__answer {
+    text-align: left;
+    padding-bottom: 3rem;
+    position: relative;
+    transition: all 0.5 ease-in-out;
+}
+
+.question__answer::after  {
+    content: '';
+    background-color: transparentize(black, 0.8);
+    padding: 0;
+    display: block;
+    position: absolute;
+    bottom: 1.5rem;
+    left: 0;
+    right: 0;
+    @include mobile-max-width;
+    height: 1px;
+}
+
+.question__answer--toggled {
+    display: none;
+}
+
+.question__arrow--active {
+    transform: rotate(180deg);
+    filter: invert(49%) sepia(73%) saturate(2361%) hue-rotate(327deg) brightness(97%) contrast(101%);
+}

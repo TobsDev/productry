@@ -1,0 +1,49 @@
+@import '../../base/variables';
+@import '../../base/colors';
+
+.footer {
+    @include mobile-section-setting;
+    background-color: $very-dark-blue;
+    padding-top: 2rem;
+    grid-area: footer;
+}
+
+.footer__item {
+    line-height: 2.5rem;
+}
+
+.footer__links {
+    margin: 1.5rem auto;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    @include mobile-max-width;
+}
+
+.footer__link {
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    @include spacing;
+}
+
+.footer__socialLinks {
+    display: flex;
+    margin-bottom: 0.5rem;
+    margin-top: 0.8rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.footer__socialLink {
+    color: white;
+}
+
+.footer__socialItem {
+    display: inline-block;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}

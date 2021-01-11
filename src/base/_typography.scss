@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500&display=swap');
+@import './colors';
+@import './variables';
+
+$rubik: 'Rubik',
+sans-serif;
+$light: 300;
+$regular: 400;
+$bold: 500;
+$root-size: 18px;
+
+* {
+    font-family: $rubik;
+    font-weight: $regular;
+    font-size: $root-size;
+    color: $grayish-blue;
+    font-weight: $regular;
+    line-height: 1.375rem;
+}
+
+h1 {
+    font-size: 1.675rem;
+    color: black;
+    font-weight: $bold;
+}
+
+h2 {
+    font-size: 1.275rem;
+    color: black;
+    font-weight: $bold;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.125rem;
+    color: black;
+    font-weight: $bold;
+    margin-bottom: 1rem;
+}
+
+h4 {
+    font-size: 0.875rem;
+    color: black;
+    font-weight: $regular;
+    margin-bottom: 1rem;
+}
+
+li {
+    font-size: 0.95rem;
+    //color: black;
+    font-weight: $regular;
+}
+
+p {
+    font-size: 0.875rem;
+    font-weight: $light;
+}
+
+span {
+    font-size: 0.7rem;
+}
+
+button {
+    font-size: 0.8rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media (min-width: $mediumWidth) {
+    h1 {
+        font-size: 2.675rem;
+    }
+
+    h2, h3 {
+        font-size: 1.75rem;
+    }
+}

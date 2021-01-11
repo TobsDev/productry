@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "question": "What is Bookmark",
+        "answer": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+    },
+    {
+        "id": 2,
+        "question": "How can I request a new browser",
+        "answer": "Dignissimos dolore nihil eum. Architecto repellat ipsum sed nobis voluptatum quia deserunt earum nisi culpa, delectus quod corporis blanditiis, accusamus ea minima."
+    },
+    {
+        "id": 3,
+        "question": "Is there a mobile app",
+        "answer": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+    },
+    {
+        "id": 4,
+        "question": "What about other Chromium browsers",
+        "answer": "Dignissimos dolore nihil eum. Architecto repellat ipsum sed nobis voluptatum quia deserunt earum nisi culpa, delectus quod corporis blanditiis, accusamus ea minima."
+    }
+]
