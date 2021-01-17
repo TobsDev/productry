@@ -11,7 +11,7 @@
     @include mobile-section-setting;
 }
 
-.hero__claim-container {
+.hero__markdownContent-container {
     grid-area: claim;
 }
 
@@ -42,7 +42,7 @@
     text-transform: capitalize;
 }
 
-.hero__claim {
+.hero__markdownContent {
     max-width: $mobileWidth;
     margin-left: auto;
     margin-right: auto;
@@ -89,11 +89,11 @@
         align-items: center;
     }
 
-    .hero__claim-container {
+    .hero__markdownContent-container {
         text-align: left;
     }
 
-    .hero__claim {
+    .hero__markdownContent {
         margin-left: 0;
     }
 
