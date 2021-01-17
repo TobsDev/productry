@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Header from '../layout/header/header'
 import Hero from '../components/hero/hero'
 import Features from '../components/features/features'
@@ -16,6 +16,7 @@ class IndexPage extends React.Component {
   }
 
   render() {
+     
     return ( 
       <div className = "indexPage" id="indexPage">
         <Header />

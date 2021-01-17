@@ -1,8 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Product Development`,
+    description: `Product Development Representation.`,
+    author: `@tobiasrosenberg`,
+  },
+  flags: {
+    THE_FLAG: false
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -20,6 +23,14 @@ module.exports = {
         path: `${__dirname}/src/markdown-pages`,
       },
     },
+    {
+      resolve: 'gatsby-source-google-sheets',
+      options: {
+          spreadsheetId: '11Wkf97CsgOnUkNJ67rib-H4-2bnl1BmKqdpxeCt491w',
+          worksheetTitle: 'Hero',
+          credentials: require('./client-secret.json')
+      }
+  },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-styled-components`,

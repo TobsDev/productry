@@ -2,18 +2,18 @@
     "sections": [
         {
             "id": 1,
-            "name": "Features",
-            "url": "#features"
+            "name": "Services",
+            "url": "#services"
         },
         {
             "id": 2,
-            "name": "Pricing",
-            "url": "#pricing"
+            "name": "Projects",
+            "url": "#projects"
         },
         {
             "id": 3,
             "name": "Contact",
-            "url": "#newsletter"
+            "url": "#contact"
         }
     ],
     "socialLinks": [

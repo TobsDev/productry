@@ -13,7 +13,7 @@ class Newsletter extends React.Component {
 
     render() {
         return(
-            <div className="newsletter" id="newsletter">
+            <div className="newsletter" id="contact">
                 <div className="newsletter__viewport">
                     <span className="newsletter__claim">35.000+ already joined</span>
                     <h2 className="newsletter__title">Stay up-to-date with what we're doing</h2>

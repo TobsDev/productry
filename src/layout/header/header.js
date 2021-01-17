@@ -79,7 +79,7 @@ class Header extends React.Component {
                             })}
                         </ul>
                         <Button 
-                            cta="Login"
+                            cta="Contact"
                             className="header__nav-button"
                         />
                     </div>

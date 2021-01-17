@@ -1,5 +1,7 @@
 @import '../../base/variables';
 
+// TODO: change font color depending on current section
+
 .header {
     position: sticky;
     top: -100px;
@@ -91,7 +93,7 @@
     .header__nav-button {
         margin-left: 1rem;
         text-transform: uppercase;
-        background-color: $soft-red;
+        background-color: $cerise;
         padding: 0.6rem 1.5rem;
     }
 }
