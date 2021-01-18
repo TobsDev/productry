@@ -7,56 +7,67 @@ import parseMarkdown from '../../utils/markdownParser';
 
 function Hero() {
 
-   const data = useStaticQuery(graphql`
-   query HeroQuery {
-    allGoogleSheetSectionsRow(filter: {sectionname: {eq: "Hero"}}) {
-      nodes {
-        sectioncontent
-        sectioncta1
-        sectioncta2
-        sectionid
-        sectionname
-        sectionsubtitle
-        sectiontitle
-        items
-        id
-        sectioninnav
-        sectioncta1Targetpath
-      }
+const data = useStaticQuery(graphql`
+query HeroSection {
+    allGoogleSheetIndexSectionsEnRow(filter: {sectionname: {eq: "Hero"}}) {
+        edges {
+            node {
+                sectiontitle
+                sectionsubtitle
+                sectionname
+                sectioninnav
+                sectionid
+                sectionctatargetpath
+                sectioncta
+                sectioncontent
+                id
+                sectionimagealt
+                sectionimageurl
+            }
+        }
     }
-  }
-    `) 
+}`) 
+
+let { sectiontitle, 
+    sectionsubtitle, 
+    sectionname, 
+    sectioninnav, 
+    sectionid, 
+    sectionimagealt,
+    sectionimageurl,
+    sectionctatargetpath, 
+    sectioncta, 
+    sectioncontent, 
+    id } = data.allGoogleSheetIndexSectionsEnRow.edges[0].node
 
     return (
-        <div className="hero" id={data.allGoogleSheetSectionsRow.nodes[0].id}>
+        <div className="hero" id={id}>
             <div className="hero__viewport">
                 <div className="hero__illustrationContainer">
                     <img 
-                        src={heroIllustration}
-                        alt={data.allGoogleSheetSectionsRow.nodes[0].imagealt} 
+                        src={sectionimageurl}
+                        alt={sectionimagealt} 
                         className="hero__image"
                     />
                 </div>
                 <div className="hero__markdownContent-container">
-                    <h1 className="hero__headline">{data.allGoogleSheetSectionsRow.nodes[0].sectiontitle}</h1>
-                    <h2 className="hero__subtitle">{data.allGoogleSheetSectionsRow.nodes[0].sectionsubtitle}</h2>
-                    <div className="hero__markdownContent" dangerouslySetInnerHTML={{__html: parseMarkdown(data.allGoogleSheetSectionsRow.nodes[0].sectioncontent)}}></div>
+                    <h1 className="hero__headline">{sectiontitle}</h1>
+                    <h2 className="hero__subtitle">{sectionsubtitle}</h2>
+                    <div className="hero__markdownContent" dangerouslySetInnerHTML={{__html: parseMarkdown(sectioncontent)}}></div>
                     <div className="hero__buttons">
                         <Button 
                             className="hero__button hero__button1"
-                            cta={data.allGoogleSheetSectionsRow.nodes[0].sectioncta1}
-                            url={data.allGoogleSheetSectionsRow.nodes[0].sectioncta1Targetpath}
+                            cta={sectioncta}
+                            url={sectionctatargetpath}
                         />
-                        <Button 
-                            cta={data.allGoogleSheetSectionsRow.nodes[0].sectioncta2}
-                            className="hero__button hero__button--secondary hero__button2"
-                            url='#hero'
-                        />
+                        
                     </div>
                 </div>
             </div>
         </div> 
     );
 }
+
+//const Hero = () => <div>test</div>
 
 export default Hero
