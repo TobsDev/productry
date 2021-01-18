@@ -1,4 +1,8 @@
 const parseMarkdown = (markdownText) => {
+
+	if (!markdownText) {
+		return 'didn\'t receive markdown content';
+	}
 	const htmlText = markdownText
 		.replace(/^### (.*$)/gim, '<h3>$1</h3>')
 		.replace(/^## (.*$)/gim, '<h2>$1</h2>')
@@ -9,6 +13,8 @@ const parseMarkdown = (markdownText) => {
 		.replace(/!\[(.*?)\]\((.*?)\)/gim, "<img alt='$1' src='$2' />")
 		.replace(/\[(.*?)\]\((.*?)\)/gim, "<a href='$2'>$1</a>")
 		.replace(/\n$/gim, '<br />')
+
+
 
 	return htmlText.trim()
 }

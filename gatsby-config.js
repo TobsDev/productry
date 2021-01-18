@@ -27,7 +27,7 @@ module.exports = {
       resolve: 'gatsby-source-google-sheets',
       options: {
           spreadsheetId: '11Wkf97CsgOnUkNJ67rib-H4-2bnl1BmKqdpxeCt491w',
-          worksheetTitle: 'IndexSectionsEN',
+          worksheetTitle: 'pagecontent',
           credentials: require('./client-secret.json')
       }
   },

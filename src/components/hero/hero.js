@@ -9,56 +9,60 @@ function Hero() {
 
 const data = useStaticQuery(graphql`
 query HeroSection {
-    allGoogleSheetIndexSectionsEnRow(filter: {sectionname: {eq: "Hero"}}) {
-        edges {
-            node {
-                sectiontitle
-                sectionsubtitle
-                sectionname
-                sectioninnav
-                sectionid
-                sectionctatargetpath
-                sectioncta
-                sectioncontent
-                id
-                sectionimagealt
-                sectionimageurl
-            }
+    allGoogleSheetPagecontentRow(filter: {name: {eq: "Hero"}, language: {eq: "en"}}) {
+      edges {
+        node {
+          page
+          name
+          imageurl
+          imagealt
+          id
+          ctatarget
+          cta
+          contentid
+          subtitle
+          title
+          type
+          useinnav
+          markdowncontent
         }
+      }
     }
-}`) 
+  }`) 
 
-let { sectiontitle, 
-    sectionsubtitle, 
-    sectionname, 
-    sectioninnav, 
-    sectionid, 
-    sectionimagealt,
-    sectionimageurl,
-    sectionctatargetpath, 
-    sectioncta, 
-    sectioncontent, 
-    id } = data.allGoogleSheetIndexSectionsEnRow.edges[0].node
+let { page,
+    name,
+    imageurl,
+    imagealt,
+    id,
+    ctatarget,
+    cta,
+    contentid,
+    subtitle,
+    title,
+    type,
+    useinnav,
+    markdowncontent } = data.allGoogleSheetPagecontentRow.edges[0].node
 
     return (
         <div className="hero" id={id}>
             <div className="hero__viewport">
                 <div className="hero__illustrationContainer">
                     <img 
-                        src={sectionimageurl}
-                        alt={sectionimagealt} 
+                        src={imageurl}
+                        alt={imagealt} 
                         className="hero__image"
                     />
                 </div>
                 <div className="hero__markdownContent-container">
-                    <h1 className="hero__headline">{sectiontitle}</h1>
-                    <h2 className="hero__subtitle">{sectionsubtitle}</h2>
-                    <div className="hero__markdownContent" dangerouslySetInnerHTML={{__html: parseMarkdown(sectioncontent)}}></div>
+                    <h1 className="hero__headline">{title}</h1>
+                    <h2 className="hero__subtitle">{subtitle}</h2>
+                    <div className="hero__markdownContent" dangerouslySetInnerHTML={{__html: parseMarkdown(markdowncontent)}}></div>
                     <div className="hero__buttons">
                         <Button 
                             className="hero__button hero__button1"
-                            cta={sectioncta}
-                            url={sectionctatargetpath}
+                            cta={cta}
+                            url={ctatarget}
                         />
                         
                     </div>
@@ -68,6 +72,6 @@ let { sectiontitle,
     );
 }
 
-//const Hero = () => <div>test</div>
+// const Hero = () => <div>test</div>
 
 export default Hero
