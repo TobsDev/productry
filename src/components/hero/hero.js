@@ -4,6 +4,7 @@ import heroIllustration from '../../images/illustration-hero.svg';
 import { graphql, useStaticQuery } from 'gatsby';
 import parseMarkdown from '../../utils/markdownParser';
 // import backgroundShape from '../../images/background-shape-long.svg'
+import BackgroundImage from '../../layout/backgroundImage';
 
 function Hero() {
 
@@ -47,27 +48,26 @@ let { page,
     return (
         <div className="hero" id={id}>
             <div className="hero__viewport">
-                <div className="hero__illustrationContainer">
+                {/*<div className="hero__illustrationContainer">
                     <img 
                         src={imageurl}
                         alt={imagealt} 
                         className="hero__image"
                     />
-                </div>
-                <div className="hero__markdownContent-container">
-                    <h1 className="hero__headline">{title}</h1>
-                    <h2 className="hero__subtitle">{subtitle}</h2>
-                    <div className="hero__markdownContent" dangerouslySetInnerHTML={{__html: parseMarkdown(markdowncontent)}}></div>
-                    <div className="hero__buttons">
-                        <Button 
-                            className="hero__button hero__button1"
-                            cta={cta}
-                            url={ctatarget}
-                        />
-                        
+                </div>*/}
+                    <div className="hero__markdownContent-container">
+                        <h1 className="hero__headline">{title}</h1>
+                        <h2 className="hero__subtitle">{subtitle}</h2>
+                        <div className="hero__markdownContent" dangerouslySetInnerHTML={{__html: parseMarkdown(markdowncontent)}}></div>
+                        <div className="hero__buttons">
+                            <Button 
+                                className="hero__button hero__button1"
+                                cta={cta}
+                                url={ctatarget}
+                            />    
+                        </div>
                     </div>
                 </div>
-            </div>
         </div> 
     );
 }

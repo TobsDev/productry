@@ -1,3 +1,6 @@
+require('dotenv').config()
+let clientSecretFromEnv = JSON.parse(process.env.CLIENTSECRET)
+
 module.exports = {
   siteMetadata: {
     title: `Product Development`,
@@ -28,7 +31,7 @@ module.exports = {
       options: {
           spreadsheetId: '11Wkf97CsgOnUkNJ67rib-H4-2bnl1BmKqdpxeCt491w',
           worksheetTitle: 'pagecontent',
-          credentials: require('./client-secret.json')
+          credentials: clientSecretFromEnv,
       }
   },
     `gatsby-transformer-sharp`,

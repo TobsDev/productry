@@ -11,6 +11,12 @@
     @include mobile-section-setting;
 }
 
+.hero__backgroundImage {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .hero__markdownContent-container {
     grid-area: claim;
 }
