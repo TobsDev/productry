@@ -5,6 +5,7 @@
 .hero {
     overflow: hidden;
     grid-area: hero;
+    
 }
 
 .hero__viewport {
@@ -80,9 +81,6 @@
 }
 
 @media (min-width: $mediumWidth) {
-    .hero {
-        margin: auto;
-    }
 
     .hero__viewport {
         @include desktop-section-setting;
@@ -93,6 +91,9 @@
             'claim illustration';
         
         align-items: center;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .hero__markdownContent-container {

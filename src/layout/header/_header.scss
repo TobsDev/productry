@@ -90,8 +90,13 @@
         text-transform: uppercase;
     }
 
+    .header__nav-link:hover {
+        color: $gunmetal;
+    }
+
     .header__nav-button {
         margin-left: 1rem;
+        margin-right: 2rem;
         text-transform: uppercase;
         background-color: $cerise;
         padding: 0.6rem 1.5rem;

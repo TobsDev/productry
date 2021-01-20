@@ -26,6 +26,7 @@ query HeroSection {
           type
           useinnav
           markdowncontent
+          backgroundcolor
         }
       }
     }
@@ -43,18 +44,19 @@ let { page,
     title,
     type,
     useinnav,
-    markdowncontent } = data.allGoogleSheetPagecontentRow.edges[0].node
+    markdowncontent,
+    backgroundcolor } = data.allGoogleSheetPagecontentRow.edges[0].node
 
     return (
-        <div className="hero" id={id}>
+        <div className="hero" id="hero" style={{backgroundColor: backgroundcolor}}>
             <div className="hero__viewport">
-                {/*<div className="hero__illustrationContainer">
+                <div className="hero__illustrationContainer">
                     <img 
                         src={imageurl}
                         alt={imagealt} 
                         className="hero__image"
                     />
-                </div>*/}
+                </div>
                     <div className="hero__markdownContent-container">
                         <h1 className="hero__headline">{title}</h1>
                         <h2 className="hero__subtitle">{subtitle}</h2>

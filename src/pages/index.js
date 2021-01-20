@@ -6,9 +6,10 @@ import Downloads from '../components/downloads/download'
 import FAQS from '../components/faqs/faqs'
 import Newsletter from '../components/newsletter/newsletter'
 import Footer from '../layout/footer/footer'
+import TopButton from '../utils/scrollToTop'
 import '../scss/main.scss'
-import BackgroundImage from '../layout/backgroundImage'
 import { graphql, useStaticQuery } from 'gatsby'
+import Layout from '../layout/layout/layout'
 
 const IndexPage = () => {
 
@@ -27,21 +28,16 @@ const IndexPage = () => {
   let { imageurl, backgroundcolor } = data.allGoogleSheetPagecontentRow.edges[0].node
 
   return(
-    <div className = "indexPage" id="indexPage">
-      <Header />
-      <BackgroundImage 
-        url={imageurl} 
-        backgroundcolor={backgroundcolor}
-        className="hero__backgroundImage"
-        >
+    <Layout>
+      <div id="indexPage" className="indexPage">
         <Hero />
-      </BackgroundImage>
-      <Features />
-      <Downloads />
-      <FAQS />
-      <Newsletter />
-      <Footer />
-    </div>
+        <Features />
+        <Downloads />
+        <FAQS />
+        <Newsletter />
+      </div>
+    </Layout>
+    
   )
 }
 

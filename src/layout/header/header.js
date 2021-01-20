@@ -7,6 +7,7 @@ import logo from '../../images/logo-bookmark.svg'
 import navigation from '../../content/navigation.json'
 import Button from '../../components/button/button'
 import window from 'global'
+import LanguageSwitcher from '../../utils/language-switcher'
 
 class Header extends React.Component {
     constructor(props) {
@@ -81,6 +82,10 @@ class Header extends React.Component {
                         <Button 
                             cta="Contact"
                             className="header__nav-button"
+                        />
+                        <LanguageSwitcher
+                            language="de"
+                            location={this.props.location}
                         />
                     </div>
                     

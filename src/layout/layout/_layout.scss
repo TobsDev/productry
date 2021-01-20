@@ -1,0 +1,17 @@
+@import '../../base/variables';
+
+.layout {
+    text-align: center;
+}
+
+@media (min-width: $mediumWidth) {
+    .layout {
+        margin: 0 auto;
+        overflow: hidden;
+        display: grid;
+        grid-template-areas: 
+            'header'
+            'main'
+            'footer';
+    }
+}
