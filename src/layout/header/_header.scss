@@ -3,8 +3,9 @@
 // TODO: change font color depending on current section
 
 .header {
-    position: sticky;
-    top: -100px;
+    position: fixed;
+    bottom: -100px;
+    margin-top: auto;
     background: white;
     z-index: 5;
     -webkit-transition: all 0.4s linear;
@@ -17,11 +18,15 @@
 .header__viewport {
     @include mobile-section-setting;
     @include mobile-max-width;
-    padding-top: 2rem;
+    padding: 0rem 1.5rem 0rem 1.5rem;
+
 }
 
 .header--sticky {
-    top: 0;
+    bottom: 0;
+    box-shadow: 0 -20px 65px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
 }
 
 .header--invisible {
@@ -32,6 +37,7 @@
     cursor: pointer;
     display: inline-block;
     float: right;
+    // might have to add margin top and bottom
 }
 
 .header__items {
@@ -39,6 +45,11 @@
     line-height: 100%;
     position: relative;
     vertical-align: middle;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    //display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .header__items::after {

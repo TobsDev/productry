@@ -1,0 +1,17 @@
+@import '../../base/variables';
+@import '../../base/colors';
+
+.logoGrid {
+    overflow: hidden;
+    grid-area: logogrid;
+    margin-top: 60px;
+}
+
+.logoGrid__viewport {
+    @include mobile-section-setting;
+}
+
+.logoGrid__heading {
+    text-align: center;
+}
+

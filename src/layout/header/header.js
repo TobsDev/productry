@@ -15,7 +15,7 @@ class Header extends React.Component {
         this.state = {
             navState: false,
             prevScrollPos: 0,
-            headerVisible: true
+            headerVisible: false
         }
         this.toggleNav = this.toggleNav.bind(this);
     }

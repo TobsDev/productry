@@ -10,6 +10,7 @@ import TopButton from '../utils/scrollToTop'
 import '../scss/main.scss'
 import { graphql, useStaticQuery } from 'gatsby'
 import Layout from '../layout/layout/layout'
+import LogoGrid from '../components/logoGrid/logoGrid'
 
 const IndexPage = () => {
 
@@ -31,6 +32,7 @@ const IndexPage = () => {
     <Layout>
       <div id="indexPage" className="indexPage">
         <Hero />
+        <LogoGrid />
         <Features />
         <Downloads />
         <FAQS />

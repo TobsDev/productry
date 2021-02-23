@@ -58,8 +58,8 @@ let { page,
                     />
                 </div>
                     <div className="hero__markdownContent-container">
-                        <h1 className="hero__headline">{title}</h1>
                         <h2 className="hero__subtitle">{subtitle}</h2>
+                        <h1 className="hero__headline">{title}</h1>
                         <div className="hero__markdownContent" dangerouslySetInnerHTML={{__html: parseMarkdown(markdowncontent)}}></div>
                         <div className="hero__buttons">
                             <Button 
