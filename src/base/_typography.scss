@@ -41,8 +41,8 @@ $black: 900;
     font-family: $poppins;
     font-weight: $light;
     font-size: $root-size;
-    color: $grayish-blue;
-    font-weight: $regular;
+    color: $gunmetal;
+    font-weight: $extra-light;
     line-height: 1.5em; //calc(1em*1.5);
 }
 
@@ -71,7 +71,7 @@ h2 {
     color: $dodger-blue;
     font-style: italic;
     text-align: left;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 h3 {
@@ -81,6 +81,11 @@ h3 {
 
 h4 {
     font-size: scaledFont($scaling-factor-small, 2);
+    @include headline()
+}
+
+h5 {
+    font-size: scaledFont($scaling-factor-small, 1);
     @include headline()
 }
 
@@ -94,7 +99,8 @@ p {
     font-size: scaledFont($scaling-factor-small, 0);
     font-weight: $extra-light;
     margin-bottom: 1.5rem;
-    @include truncate(400);
+    //@include truncate(1200);
+    text-align: left;
 }
 
 span {

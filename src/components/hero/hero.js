@@ -1,13 +1,15 @@
 import React from 'react';
 import Button from '../../components/button/button';
-import heroIllustration from '../../images/illustration-hero.svg';
+//import heroIllustration from '../../images/illustration-hero.svg';
 import { graphql, useStaticQuery } from 'gatsby';
 import parseMarkdown from '../../utils/markdownParser';
 // import backgroundShape from '../../images/background-shape-long.svg'
 import BackgroundImage from '../../layout/backgroundImage';
+import Img from "gatsby-image"
 
 function Hero() {
 
+// data query
 const data = useStaticQuery(graphql`
 query HeroSection {
     allGoogleSheetPagecontentRow(filter: {name: {eq: "Hero"}, language: {eq: "en"}}) {
@@ -29,7 +31,14 @@ query HeroSection {
           backgroundcolor
         }
       }
-    }
+    },
+    allImageSharp(filter: {id: {eq: "5bcfcff9-4601-5c2d-8442-02e1e702bede"}}) {
+        nodes {
+            fixed(fit: COVER) {
+            ...GatsbyImageSharpFixed_withWebp_tracedSVG
+          }
+        }
+      }
   }`) 
 
 let { page,
@@ -51,11 +60,12 @@ let { page,
         <div className="hero" id="hero" style={{backgroundColor: backgroundcolor}}>
             <div className="hero__viewport">
                 <div className="hero__illustrationContainer">
-                    <img 
-                        src={imageurl}
+                    <Img 
                         alt={imagealt} 
-                        className="hero__image"
-                    />
+                        className="hero__image--test" 
+                        fixed={data.allImageSharp.nodes[0].fixed}
+                    / >
+                    
                 </div>
                     <div className="hero__markdownContent-container">
                         <h2 className="hero__subtitle">{subtitle}</h2>
@@ -73,7 +83,5 @@ let { page,
         </div> 
     );
 }
-
-// const Hero = () => <div>test</div>
 
 export default Hero

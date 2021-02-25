@@ -1,9 +1,11 @@
 @import '../../base/variables';
+@import '../../base/colors';
 
 .downloads {
     padding-bottom: 6.5rem;
     grid-area: downloads;
-    margin: auto;
+    @include top-bottom-padding;
+    background-color: $very-light-blue;
 }
 
 .downloads__viewport {

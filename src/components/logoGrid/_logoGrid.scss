@@ -4,14 +4,37 @@
 .logoGrid {
     overflow: hidden;
     grid-area: logogrid;
-    margin-top: 60px;
+    background-color: $toned-done-yellow;
+    @include top-bottom-padding;
 }
 
 .logoGrid__viewport {
     @include mobile-section-setting;
 }
 
+.logoGrid__container {
+    display: grid;
+    grid-template-areas: 
+        'logo1 logo2'
+        'logo3 logo4';
+    grid-gap: 3rem;
+    justify-content: space-around;
+    padding-top: 1rem;
+}
+
 .logoGrid__heading {
     text-align: center;
 }
 
+.logoGrid__logo1 {
+    grid-area: logo1
+}
+.logoGrid__logo2 {
+    grid-area: logo2
+}
+.logoGrid__logo3 {
+    grid-area: logo3
+}
+.logoGrid__logo4 {
+    grid-area: logo4
+}

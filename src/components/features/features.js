@@ -23,20 +23,21 @@ class Features extends React.Component {
             <div id="features" className="features">
                 <div className="features__viewport">
                     <div className="features__overview">
-                        <h2 className="features__headline">Features</h2>
+                        <h2 className="features__headline">This is what we can do for you</h2>
+                        <h3 className="features__headline">Our Services</h3>
                         <p className="features__copy">Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access thern on the go.</p>
                         <ul className="features__list">
                             {features.map(feature => {
                                 return(
                                     <div key={feature.id} className="features__item-container">
-                                        <li 
+                                        <h5 
                                             className={`features__item ${this.state.activeFeature == feature.id ? 'features__item--active' : ''}`} 
                                             key={feature.id} 
                                             id={feature.id}
                                             onClick={this.toggleFeature}
                                         >
                                             {feature.title}
-                                        </li>
+                                        </h5>
                                     </div>
                                     
                                 );

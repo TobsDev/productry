@@ -5,8 +5,7 @@
 .hero {
     overflow: hidden;
     grid-area: hero;
-    margin-top: 60px;
-    
+    @include top-bottom-padding;
 }
 
 .hero__viewport {
@@ -68,7 +67,7 @@
     max-width: $mobileWidth;
     //margin-left: auto;
     //margin-right: auto;
-    margin-bottom: 7rem;
+    //margin-bottom: 7rem;
     margin-top: 9rem;
     display: grid;
     grid-template: 'button1 button2';

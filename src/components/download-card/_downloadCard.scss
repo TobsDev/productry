@@ -2,11 +2,16 @@
 
 .downloadCard {
     width: 100%;
-    padding: 3rem 1.5rem 1.5rem 1.5rem;
     box-shadow: $md-box-shadow;
     border-radius: 1rem;
     position: relative;
     @include mobile-max-width;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+.downloadCard__content {
+    padding: 1rem;
 }
 
 .downloadCard__button {
@@ -14,15 +19,20 @@
 }
 
 .downloadCard__title {
-    font-size: 1.125rem;
+
 }
 
 .downloadCard__logo {
-    margin-bottom: 2rem;
+    max-width: 100%;
+    border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .downloadCard__version {
     margin-bottom: 3rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
 }
 
 .downloadCard__line {
@@ -30,6 +40,34 @@
     bottom: 5rem;
     left: 0;
     width: 100%;
+}
+
+.downloadCard--modal {
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 6;
+}
+
+.downloadCard__header {
+    position: fixed;
+    height: 3rem;
+    width: 100vw;
+    top: 0;
+    margin-top: auto;
+    background: white;
+    z-index: 5;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+}
+
+.downloadCard--modal .downloadCard__button {
+    display: none;
 }
 
 @media (min-width: $mediumWidth) {

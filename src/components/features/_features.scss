@@ -1,27 +1,33 @@
 @import '../../base/variables';
+@import '../../base/colors';
 
 .features {
     overflow: hidden;
     grid-area: features;
+    @include top-bottom-padding;
+    background-color: $gunmetal;
 }
 
 .features__viewport {
     @include mobile-section-setting;
-    padding-bottom: 6.5rem;
 }
 
 .features__copy {
     //max-width: 17rem;
-    margin-left: auto;
-    margin-right: auto;
+    //margin-left: auto;
+    //margin-right: auto;
     margin-bottom: 1.25rem;
-    max-width: $mobileWidth;
+    max-width: $mediumWidth;
+    color: white;
 }
 
 .features__item {
     line-height: 3.5rem;
     position: relative;
     cursor: pointer;
+    font-weight: $extra-light;
+    margin-bottom: 0;
+    text-align: center;
 }
 
 .features__list {
@@ -54,12 +60,12 @@
 } 
 
 .features__item--active {
-    color: black;
+    font-weight: $bold;
 }
 
 .features__item--active::after {
     content: '';
-    background-color: transparentize(red, 0.2);
+    background-color: transparentize($cerise, 0.2);
     padding: 0;
     display: block;
     position: absolute;
@@ -68,7 +74,7 @@
     right: 0;
     margin: auto;
     width: 8rem;
-    height: 4px;
+    height: 2px;
 }
 
 @media (min-width: $mediumWidth) {
