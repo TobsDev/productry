@@ -22,7 +22,7 @@
 
 }
 
-.downloadCard__logo {
+.downloadCard__image {
     max-width: 100%;
     border-radius: 0.5rem 0.5rem 0 0;
 }
@@ -34,6 +34,14 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 5;
 }
+
+.downloadCard--modal .downloadCard__version {
+    overflow-y: visible;
+    display: block;
+    //-webkit-box-orient: vertical;
+    //-webkit-line-clamp: 5;
+}
+
 
 .downloadCard__line {
     position: absolute;
@@ -50,24 +58,48 @@
     top: 0;
     left: 0;
     z-index: 6;
+    overflow-y: auto;
+    border-radius: 0;
 }
 
 .downloadCard__header {
+    display: none;
+    max-width: $mediumWidth;
+    margin: auto;
+    justify-content: space-between;
+    padding-left: 1rem;
+    align-items: center;
+}
+
+.downloadCard__cta {
+    @include linkCta;
+    display: none;    
+    text-align: left;
+}
+
+.downloadCard--modal .downloadCard__cta {
+    display: block;
+}
+
+.downloadCard--modal .downloadCard__button {
+    display: none;
+}
+
+.downloadCard--modal .downloadCard__header {
+    display: flex;
     position: fixed;
-    height: 3rem;
+    //height: 3rem;
     width: 100vw;
     top: 0;
     margin-top: auto;
     background: white;
     z-index: 5;
-    -webkit-transition: all 0.4s linear;
-    -moz-transition: all 0.4s linear;
-    -o-transition: all 0.4s linear;
-    transition: all 0.4s linear;
 }
 
-.downloadCard--modal .downloadCard__button {
-    display: none;
+.downloadCard__header__logo, .downloadCard__header__close {
+    height: auto;
+    margin: 0;
+    text-transform: uppercase;
 }
 
 @media (min-width: $mediumWidth) {

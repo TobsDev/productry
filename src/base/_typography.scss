@@ -53,6 +53,7 @@ $black: 900;
     text-transform: uppercase;
     text-align: left;
     margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
     //text-shadow: 0px 3px 6px #d5d5d5;
     //not sure if the margin is still necessary
     //margin-bottom: 1rem;
@@ -99,7 +100,6 @@ p {
     font-size: scaledFont($scaling-factor-small, 0);
     font-weight: $extra-light;
     margin-bottom: 1.5rem;
-    //@include truncate(1200);
     text-align: left;
 }
 
@@ -117,7 +117,12 @@ label {
 
 a {
     text-decoration: none;  
+    color: $dodger-blue;
+}
+
+@mixin linkCta {
     color: $cerise;
+    font-size: scaledFont($scaling-factor-small, 1)
 }
 
 @media (min-width: $mediumWidth) {

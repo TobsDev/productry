@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Button from '../button/button';
 import luexLogo from '../../images/case-images/luex.png'
-import close from '../../images/icon-close.svg'
+import close from '../../images/icon-close_black.svg'
 import Img from "gatsby-image"
 import { graphql, useStaticQuery } from 'gatsby'
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 
 function DownloadCard (props) {
@@ -39,21 +40,30 @@ function DownloadCard (props) {
         <div className={`downloadCard ${modal ? "downloadCard--modal" : ``}`} onClick={toggleVisibility} >
             <Img 
                 alt="some description" 
-                className="downloadCard__logo--test"
+                className="downloadCard__image"
                 fluid={data.allImageSharp.edges[0].node.fluid}
-            / >
+                backgroundColor
+            />
     {/*<img src={logo} alt="" className="downloadCard__logo" />*/}
             <div className="downloadCard__content">
                 <h5 className="downloadCard__title">{props.name}</h5>
                 <p className="downloadCard__version">{props.minVersion}</p>
-                <Button 
-                    cta="Add & Install Extension"
+                {/*<Button 
+                    cta="Let's talk"
                     className="downloadCard__button"
-                />
+                />*/}
+                <AnchorLink to="#contact" title="Contact" className="downloadCard__cta" stripHash>
+                    <span className="downloadCard__cta">Let's talk</span>
+                </AnchorLink>
             </div>
             <div className="downloadCard__header">
-                <img src={close} alt="" className="downloadCard__header__logo" />
-                <img src={close} alt="" className="downloadCard__header__close" />
+                <p className="downloadCard__header__logo">smarto</p>
+                <img 
+                    src={close} 
+                    alt="close nav" 
+                    className="downloadCard__header__close"
+                    onClick={toggleVisibility}
+                />
             </div>
         </div>
     );

@@ -4,13 +4,14 @@ import Hero from '../components/hero/hero'
 import Features from '../components/features/features'
 import Downloads from '../components/downloads/download'
 import FAQS from '../components/faqs/faqs'
-import Newsletter from '../components/newsletter/newsletter'
+import Contact from '../components/contact/contact'
 import Footer from '../layout/footer/footer'
 import TopButton from '../utils/scrollToTop'
 import '../scss/main.scss'
 import { graphql, useStaticQuery } from 'gatsby'
 import Layout from '../layout/layout/layout'
 import LogoGrid from '../components/logoGrid/logoGrid'
+import Team from '../components/team/team'
 
 const IndexPage = () => {
 
@@ -35,8 +36,9 @@ const IndexPage = () => {
         <LogoGrid />
         <Features />
         <Downloads />
+        <Team />
         <FAQS />
-        <Newsletter />
+        <Contact />
       </div>
     </Layout>
     

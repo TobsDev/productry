@@ -1,0 +1,100 @@
+@import '../../base/variables';
+
+.teamMember {
+    width: 100%;
+    position: relative;
+    //@include mobile-max-width;
+    margin-bottom: 2rem;
+}
+
+.teamMember__content {
+    @include mobile-section-setting;
+}
+
+.teamMember__button {
+    width: 100%;
+}
+
+.teamMember__title {
+
+}
+
+.teamMember__image {
+    max-width: 100%;
+    max-height: 100%;
+    bottom: 0;
+    left: 0;
+    margin: 0 0 2rem 0;
+    overflow: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    -o-object-fit: contain;
+    object-fit: contain;
+
+
+}
+
+.teamMember__description {
+    margin-bottom: 3rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+}
+
+.teamMember__line {
+    position: absolute;
+    bottom: 5rem;
+    left: 0;
+    width: 100%;
+}
+
+
+.teamMember__header {
+    display: none;
+    max-width: $mediumWidth;
+    margin: auto;
+    justify-content: space-between;
+    padding-left: 1rem;
+    align-items: center;
+}
+
+.teamMember__cta {
+    @include linkCta;
+    display: none;    
+    text-align: left;
+}
+
+.teamMember__socialLinks::before  {
+    content: '';
+    background-color: transparentize($cerise, 0);
+    padding: 0;
+    display: block;
+    position: absolute;
+    top: -1.5rem;
+    left: 0;
+    right: 0;
+    max-width: 5rem;
+    height: 2px;
+}
+
+.teamMember__socialLinks {
+    height: auto;
+    margin: 0;
+    display: block;
+    text-align: left;
+    position: relative;
+    cursor: pointer;
+    margin-top: 5rem;
+}
+
+.teamMember__linkedInIcon{
+
+}
+
+@media (min-width: $mediumWidth) {
+    .teamMember {
+        max-width: 280px;
+    }
+}

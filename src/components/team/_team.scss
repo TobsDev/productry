@@ -1,0 +1,44 @@
+@import '../../base/variables';
+@import '../../base/colors';
+
+.team {
+    padding-bottom: 6.5rem;
+    grid-area: team;
+    @include top-bottom-padding;
+    background-color: white;
+}
+
+.team__viewport {
+    @include mobile-section-setting;
+}
+
+.team__description {
+    padding-bottom: 1.5rem;
+    @include mobile-max-width;
+}
+
+@media (min-width: calc(#{$mediumWidth} + 150px)) {
+    .team__list {
+        display: flex;
+        
+    }
+
+    .team__viewport {
+        @include desktop-section-setting;
+        align-items: center;
+        max-width: 980px;
+    }
+}
+
+@media (min-width: calc(#{$mediumWidth} + 150px)) {
+    .team__list {
+        display: flex;
+        
+    }
+
+    .team__viewport {
+        @include desktop-section-setting;
+        align-items: center;
+        max-width: 980px;
+    }
+}
