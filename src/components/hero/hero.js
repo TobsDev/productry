@@ -6,6 +6,7 @@ import parseMarkdown from '../../utils/markdownParser';
 // import backgroundShape from '../../images/background-shape-long.svg'
 import BackgroundImage from '../../layout/backgroundImage';
 import Img from "gatsby-image"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 function Hero() {
 
@@ -73,10 +74,14 @@ let { page,
                         <div className="hero__markdownContent" dangerouslySetInnerHTML={{__html: parseMarkdown(markdowncontent)}}></div>
                         <div className="hero__buttons">
                             <Button 
-                                className="hero__button hero__button1"
-                                cta={cta}
-                                url={ctatarget}
-                            />    
+                            className="hero__button hero__button1"
+                            cta={cta}
+                            url={ctatarget}
+                            >
+                                <AnchorLink to="#contact" className="hero__button__cta">
+                                    {cta}
+                                </AnchorLink>
+                            </Button>    
                         </div>
                     </div>
                 </div>

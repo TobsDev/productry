@@ -1,9 +1,10 @@
 import React from 'react';
 import logo from '../../images/logo-bookmark-inverted.svg'
 import navigation from '../../content/navigation.json'
-import facebookIcon from '../../images/icon-facebook.svg'
-import twitterIcon from '../../images/icon-twitter.svg'
+import mailIcon from '../../images/mailIcon.svg'
+import linkedInIcon from '../../images/linkedInIcon.svg'
 import Social from '../../components/social/social'
+import { FaLinkedinIn, FaCity, FaEnvelope, FaPhoneAlt, FaPhoneSquareAlt, FaPortrait, FaRegPaperPlane } from 'react-icons/fa'
 
 class Footer extends React.Component {
     constructor(props) {
@@ -17,29 +18,23 @@ class Footer extends React.Component {
             {
                 id: 1,
                 url: '/',
-                iconUrl: facebookIcon,
-                platform: 'Facebook'
+                iconUrl: linkedInIcon,
+                platform: 'LinkedIn'
             },
             {
                 id: 2,
                 url: '/',
-                iconUrl: twitterIcon,
-                platform: 'Twitter'
+                iconUrl: mailIcon,
+                platform: 'Mail'
             }
         ]
 
+        //set year-date for copyright
+        let d = new Date(); 
+        let currentYear = d.getFullYear();
+
         return(
             <div id="footer" className="footer">
-                <img src={logo} alt="" className="footer__logo"/>
-                <ul className="footer__links">
-                    {navigation.sections.map(section => {
-                        return(
-                            <div className="footer__item" key={section.id}>
-                                <a href={section.url} className="footer__link">{section.name}</a>
-                            </div>
-                        );
-                    })}
-                </ul>
                 <ul className="footer__socialLinks">
                     {socials.map((social) => {
                         return (
@@ -48,10 +43,25 @@ class Footer extends React.Component {
                                 href={social.url}
                                 src={social.iconUrl} 
                                 alt={social.platform}
+                                fill="#BDEDE0"
                             />
                         );
                     })}
                 </ul>
+                <hr className="footer__divider"/>
+                <ul className="footer__links">
+                    {navigation.footer.map(link => {
+                        return(
+                            <label className="footer__item" key={link.id}>
+                                <a href={link.url} className="footer__link">{link.name}</a>
+                            </label>
+                        );
+                    })}
+                </ul>
+                <hr className="footer__divider"/>
+                <small className="footer__copyright">
+                    &copy; Copyright {currentYear} , SMARTO
+                </small>
             </div>
         )
     }

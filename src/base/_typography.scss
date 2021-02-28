@@ -54,9 +54,6 @@ $black: 900;
     text-align: left;
     margin-bottom: 1.5rem;
     margin-top: 1.5rem;
-    //text-shadow: 0px 3px 6px #d5d5d5;
-    //not sure if the margin is still necessary
-    //margin-bottom: 1rem;
 }
 
 h1 {
@@ -107,8 +104,11 @@ span {
     font-size: 0.7rem;
 }
 
-button {
-    font-size: 0.8rem;
+@mixin button_cta {
+    color: #ffffff;
+    font-weight: $semi-bold;
+    text-decoration: none;
+    font-size: 1rem;
 }
 
 label {

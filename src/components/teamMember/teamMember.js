@@ -1,7 +1,7 @@
 import React from 'react'
 import Img from "gatsby-image"
 import { graphql, useStaticQuery, Link } from 'gatsby'
-import { FaLinkedinIn } from 'react-icons/fa'
+import { FaLinkedinIn, FaEnvelope } from 'react-icons/fa'
 
 
 // need to change to linkedin icon

@@ -3,7 +3,6 @@
 .teamMember {
     width: 100%;
     position: relative;
-    //@include mobile-max-width;
     margin-bottom: 2rem;
 }
 
@@ -13,10 +12,6 @@
 
 .teamMember__button {
     width: 100%;
-}
-
-.teamMember__title {
-
 }
 
 .teamMember__image {
@@ -31,8 +26,6 @@
     top: 0;
     -o-object-fit: contain;
     object-fit: contain;
-
-
 }
 
 .teamMember__description {
@@ -87,10 +80,6 @@
     position: relative;
     cursor: pointer;
     margin-top: 5rem;
-}
-
-.teamMember__linkedInIcon{
-
 }
 
 @media (min-width: $mediumWidth) {

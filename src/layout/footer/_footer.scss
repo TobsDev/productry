@@ -3,7 +3,7 @@
 
 .footer {
     @include mobile-section-setting;
-    background-color: $very-dark-blue;
+    background-color: $medium-gray;
     padding-top: 2rem;
     grid-area: footer;
     margin-top: auto;
@@ -13,29 +13,44 @@
     line-height: 2.5rem;
 }
 
+.footer__divider {
+    border: 0px;
+    &:before {
+        // full-width divider
+        content: "";
+        display: block;
+        position: absolute;
+        right: 0;
+        max-width: 100%;
+        width: 100%;
+        border: 1px solid grey;
+    }
+}
+
 .footer__links {
     margin: 1.5rem auto;
-    padding-bottom: 1rem;
-    padding-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
     @include mobile-max-width;
 }
 
-.footer__link {
+.footer__link, .footer__copyright {
     color: white;
-    text-transform: uppercase;
     font-size: 0.8rem;
-    @include spacing;
+    
 }
 
 .footer__socialLinks {
     display: flex;
-    margin-bottom: 0.5rem;
-    margin-top: 0.8rem;
     margin-left: auto;
     margin-right: auto;
-    width: 20%;
+    padding-left: 50%;
+    padding-right: 50%;
     justify-content: space-around;
     align-items: center;
+    position: relative;
 
 }
 

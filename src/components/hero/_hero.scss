@@ -1,5 +1,6 @@
 @import '../../base/variables';
 @import '../../base/colors';
+@import '../../base/typography';
 
 
 .hero {
@@ -44,8 +45,8 @@
     grid-area: hero;
 }
 
-.hero__headline {
-    
+.hero__button__cta {
+    @include button_cta;
 }
 
 .hero__markdownContent {

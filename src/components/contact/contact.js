@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '../button/button';
 import { useFormik } from 'formik';
-import contactBackground from '../../images/contact_background.svg'
+//import contactBackground from '../../images/contact_background.svg'
 import { FaCity, FaEnvelope, FaPhoneAlt, FaPhoneSquareAlt, FaPortrait, FaRegPaperPlane } from 'react-icons/fa'
 
 function Contact(props) {
@@ -30,8 +30,7 @@ function Contact(props) {
                     <form 
                         onSubmit={formik.handleSubmit} 
                         className="contact__form" 
-                        style={{ backgroundImage: `url(${contactBackground}) no-repeat`, backgroundSize: "cover"}}>
-                            
+                        >    
                             <label className="contact__form__label">
                                 <FaPortrait 
                                     style={{ fill: "#293241" }}

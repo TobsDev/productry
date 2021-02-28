@@ -7,27 +7,52 @@
         },
         {
             "id": 2,
-            "name": "Projects",
+            "name": "Work",
             "url": "#projects"
         },
         {
             "id": 3,
+            "name": "Team",
+            "url": "#team"
+        }
+        ,
+        {
+            "id": 4,
             "name": "Contact",
             "url": "#contact"
+        }
+    ],
+    "footer": [
+        {
+            "id": 1,
+            "name": "Imprint",
+            "url": "/imprint"
+        },
+        {
+            "id": 2,
+            "name": "Data privacy",
+            "url": "/data-privacy"
+        },
+        {
+            "id": 3,
+            "name": "Terms and conditions",
+            "url": "/terms"
         }
     ],
     "socialLinks": [
         {
             "id": 1,
             "url": "/",
-            "iconUrl": "facebookIcon",
-            "platform": "Facebook"
+            "iconUrl": "linkedInIcon.svg",
+            "platform": "LinkedIn",
+            "faIcon": "FaLinkedinIn"
         },
         {
             "id": 2,
             "url": "/",
-            "iconUrl": "twitterIcon",
-            "platform": "Twitter"
+            "iconUrl": "mailIcon.svg",
+            "platform": "Mail",
+            "faIcon": "FaEnvelope"
         }
     ]
 }

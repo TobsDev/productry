@@ -1,12 +1,11 @@
 import React from 'react';
-import { Link } from "gatsby";
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 const Button = (props) => (
-    <Link to={props.url ? props.url : '/'}>
-        <button className={`button ${props.className}`}>
-            {props.cta}
-        </button>
-    </Link>
+    
+    <button className="button">
+        { props.children ? props.children : props.cta }
+    </button>
 )
 
 export default Button

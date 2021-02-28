@@ -8,6 +8,7 @@ import navigation from '../../content/navigation.json'
 import Button from '../../components/button/button'
 import window from 'global'
 import LanguageSwitcher from '../../utils/language-switcher'
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 class Header extends React.Component {
     constructor(props) {
@@ -73,7 +74,14 @@ class Header extends React.Component {
                                 return (
                                     <div key={section.id}>
                                         <li className="header__nav-linkItem" id={section.id}>
-                                            <a className="header__nav-link" href={section.url}>{section.name}</a>
+                                            <AnchorLink 
+                                                className="header__nav-link" 
+                                                to={section.url}
+                                                stripHash
+                                                title={section.name}
+                                            >
+                                                {section.name}>
+                                            </AnchorLink>
                                         </li>
                                     </div>
                                 );
@@ -82,6 +90,7 @@ class Header extends React.Component {
                         <Button 
                             cta="Contact"
                             className="header__nav-button"
+                            section="/index#contact"
                         />
                         <LanguageSwitcher
                             language="de"
