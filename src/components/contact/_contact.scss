@@ -41,14 +41,6 @@
     
 }
 
-
-
-.contact__claim {
-    color: $light-gray;
-    text-transform: uppercase;
-    @include spacing;
-}
-
 .contact__button {
     //font-size: scaledFont($scaling-factor-small, 1);
     width: 100%;
@@ -73,8 +65,7 @@
     border-radius: 4px;
     font-size: 0.8rem;
     border: 1px solid;
-    margin: 0;
-    margin-right: 1rem;
+    margin: 0 1rem 1rem 0;
 }
 
 .contact__input {

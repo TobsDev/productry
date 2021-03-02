@@ -1,4 +1,6 @@
 @import '../../base/variables';
+@import '../../base/typography';
+@import '../../utils/scaledFontSize';
 
 .question__head {
     display: flex;
@@ -9,11 +11,23 @@
     position: relative;
     max-width: $mobileWidth;
     cursor: pointer;
+    align-items: baseline;
+}
+
+.question__number {
+    font-size: scaledFont($scaling-factor-small, 4);
+    @include headline();
+    color: $gunmetal;
+    padding-right: 1rem;
+    // position: absolute;
+    // top: -1rem;
+    // left: 0;
 }
 
 .question__title {
     margin-bottom: 0;
     pointer-events: none;
+    font-size: scaledFont($scaling-factor-small, 1);
 }
 
 .question__arrow {
@@ -40,9 +54,10 @@
     padding-bottom: 3rem;
     position: relative;
     transition: all 0.5 ease-in-out;
+    margin: 0 1rem 0 1rem;
 }
 
-.question__answer::after  {
+/* .question__answer::after  {
     content: '';
     background-color: transparentize(black, 0.8);
     padding: 0;
@@ -53,7 +68,7 @@
     right: 0;
     @include mobile-max-width;
     height: 1px;
-}
+} */
 
 .question__answer--toggled {
     display: none;

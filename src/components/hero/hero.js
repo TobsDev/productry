@@ -66,6 +66,7 @@ let { page,
                         className="hero__image--test" 
                         fixed={data.allImageSharp.nodes[0].fixed}
                     / >
+                    <a href='https://www.freepik.com/vectors/background'>Background vector created by macrovector - www.freepik.com</a>
                     
                 </div>
                     <div className="hero__markdownContent-container">

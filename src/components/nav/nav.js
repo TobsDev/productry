@@ -1,63 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from '../button/button';
-import close from '../../images/icon-close.svg'
-import logo from '../../images/logo-bookmark-inverted.svg'
-import Social from '../social/social'
+import close from '../../images/icon-close_black.svg'
+import { AnchorLink } from "gatsby-plugin-anchor-links"
+import LangSwitch from '../langSwitcher/langSwitcher'
 
-class Nav extends React.Component {
-    constructor(props) {
-        super(props);
-        
-    }
+function Nav (props) {
 
-    render() {
-        const { navToggle } = this.props
+    const { navToggle } = props
 
-        return(
-            <div className={`nav nav--${!this.props.navState ? 'inactive' : ''}`}>
-                <div className="nav__head">
-                    <img src={logo} alt="Bookmark Logo" className="nav__logo"/>
-                    <img 
-                        src={close} 
-                        alt="close nav" 
-                        className="nav__close"
-                        onClick={navToggle}
-                    />
-                </div>
+    return(
+        <div className={`nav nav--${!props.navState ? 'inactive' : ''}`}>
+            <LangSwitch 
+                activeLang="en"
+                className="nav__langSwitch"
+            />  
+            <div className="nav__content">
                 <ul className="nav__links">
-                    {this.props.sections.map((section) => {
+                    {props.sections.map((section) => {
                         return (
                             <div key={section.id}>
-                                <li className="nav__linkItem" id={section.id} onClick={navToggle} >
-                                    <a className="nav__link" href={section.url}>{section.name}</a>
+                                <li className="nav__linkItem" id={section.id} onClick={navToggle}>
+                                    <AnchorLink className={`nav__link ${section.highlight ? `nav__linkItem--highlight` : ``}`} to={section.url}>{section.name}</AnchorLink>
                                 </li>
                             </div>
                         );
                     })}
                 </ul>
-                <Button 
-                    cta="Login"
-                    className="nav__button"
-                    onClick={navToggle}
-                />
-                <ul className="nav__socialLinks">
-                    {this.props.socials.map((social) => {
-                        return (
-                            <Social 
-                                key={social.id}
-                                href={social.url}
-                                src={social.iconUrl} 
-                                alt={social.platform}
-                                onClick={navToggle}
-                            />
-                        );
-                    })}
-                     
-                </ul>
+                <img 
+                        src={close} 
+                        alt="close nav" 
+                        className="nav__close"
+                        onClick={navToggle}
+                    />
             </div>
-        );
-    }
-    
+        </div>
+    );   
 }
 
 export default Nav

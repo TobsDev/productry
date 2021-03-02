@@ -12,6 +12,8 @@ const LogoGrid = () => {
                     <LUEX className="logoGrid__logo2" id="2" />
                     <LUEX className="logoGrid__logo3" id="3" />
                     <LUEX className="logoGrid__logo4" id="4" />
+                    <LUEX className="logoGrid__logo5" id="5" />
+                    <LUEX className="logoGrid__logo6" id="6" />
                 </div>
             </div>
         </div>

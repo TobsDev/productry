@@ -13,7 +13,7 @@ function TeamMember(props) {
     // image qurey
     const data = useStaticQuery(graphql`
     query teamMemberImage {
-        allImageSharp(filter: {original: {}, id: {eq: "0ec8f374-3f26-563e-925f-610a58dccf84"}}) {
+        allImageSharp(filter: {original: {}, id: {eq: "659457f0-bb66-53af-837c-34fa6367a09d"}}) {
           edges {
             node {
               id
@@ -29,7 +29,7 @@ function TeamMember(props) {
       }`) 
 
     return (
-        <div className="teamMember" >
+        <div className="teamMember" style={{gridArea: props.gridArea}}>
             <Img 
                 alt="some description" 
                 className="teamMember__image"

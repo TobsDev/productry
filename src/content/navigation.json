@@ -3,23 +3,27 @@
         {
             "id": 1,
             "name": "Services",
-            "url": "#services"
+            "url": "#services",
+            "highlight": false
         },
         {
             "id": 2,
             "name": "Work",
-            "url": "#projects"
+            "url": "#work",
+            "highlight": false
         },
         {
             "id": 3,
             "name": "Team",
-            "url": "#team"
+            "url": "#team",
+            "highlight": false
         }
         ,
         {
             "id": 4,
             "name": "Contact",
-            "url": "#contact"
+            "url": "#contact",
+            "highlight": true
         }
     ],
     "footer": [

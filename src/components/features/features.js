@@ -20,7 +20,7 @@ class Features extends React.Component {
 
     render() {
         return(
-            <div id="features" className="features">
+            <div id="services" className="features">
                 <div className="features__viewport">
                     <div className="features__overview">
                         <h2 className="features__headline">This is what we can do for you</h2>

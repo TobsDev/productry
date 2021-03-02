@@ -66,9 +66,6 @@
 
 .hero__buttons {
     max-width: $mobileWidth;
-    //margin-left: auto;
-    //margin-right: auto;
-    //margin-bottom: 7rem;
     margin-top: 9rem;
     display: grid;
     grid-template: 'button1 button2';
@@ -88,7 +85,6 @@
 
     .hero__viewport {
         @include desktop-section-setting;
-        //padding-top: 4rem;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas: 
@@ -109,7 +105,7 @@
     }
 
     .hero__buttons {
-        margin: 0;
+        //margin: 0;
         display: flex;
     }
 

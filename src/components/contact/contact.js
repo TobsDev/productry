@@ -23,7 +23,6 @@ function Contact(props) {
     return(
         <div className="contact" id="contact">
             <div className="contact__viewport">
-                <span className="contact__claim">35.000+ already joined</span>
                 <h2 className="contact__headline">Wanna get in touch? We’re happy to hear from you</h2>
                 <h3 className="contact__title">contact</h3>
                 <div className="contact__formBackground" >

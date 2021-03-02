@@ -12,8 +12,8 @@ function Team() {
                     <p className="team__copy">We've got more browsers in the pipeline. Please do let us know if you've got a favourite you'd like us to prioritize.</p>
                 </div>
             </div>
-            <div className="team__list">
-                {team.map((teamMember) => {
+            <div className="team__members">
+                {team.map((teamMember, index) => {
                     return(
                         <TeamMember 
                             key={teamMember.id}
@@ -21,6 +21,7 @@ function Team() {
                             name={`${teamMember.name}`}
                             description={`Minimum version ${teamMember.description}`}
                             linkedIn={teamMember.linkedIn}
+                            gridArea={index}
                         />
                     );
                 })}

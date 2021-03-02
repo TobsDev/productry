@@ -48,7 +48,7 @@ $black: 900;
 
 @mixin headline {
     color: $dodger-blue;
-    font-weight: $bold;
+    font-weight: $black;
     font-family: $poppins;
     text-transform: uppercase;
     text-align: left;
@@ -88,8 +88,6 @@ h5 {
 }
 
 li {
-    //font-size: 0.95rem;
-    //color: black;
     font-weight: $regular;
 }
 
@@ -125,14 +123,25 @@ a {
     font-size: scaledFont($scaling-factor-small, 1)
 }
 
-@media (min-width: $mediumWidth) {
+@media only screen 
+and (min-width: $mediumWidth) {
     h1 {
-        //font-size: 2.675rem;
         font-size: scaledFont($scaling-factor-medium, 5);
     }
 
+    h2 {
+        font-size: scaledFont($scaling-factor-medium, 0);
+    }
+
     h3 {
-        //font-size: 1.75rem;
         font-size: scaledFont($scaling-factor-medium, 4);
+    }
+
+    h4 {
+        font-size: scaledFont($scaling-factor-medium, 1);
+    }
+
+    * {
+        font-size: 18px;
     }
 }

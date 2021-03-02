@@ -6,6 +6,7 @@
     grid-area: logogrid;
     background-color: $toned-done-yellow;
     @include top-bottom-padding;
+    justify-items: center;
 }
 
 .logoGrid__viewport {
@@ -27,14 +28,53 @@
 }
 
 .logoGrid__logo1 {
-    grid-area: logo1
+    grid-area: logo1;
 }
 .logoGrid__logo2 {
-    grid-area: logo2
+    grid-area: logo2;
 }
 .logoGrid__logo3 {
-    grid-area: logo3
+    grid-area: logo3;
 }
 .logoGrid__logo4 {
-    grid-area: logo4
+    grid-area: logo4;
 }
+.logoGrid__logo5 {
+    grid-area: logo5;
+    display: none;
+}
+.logoGrid__logo6 {
+    grid-area: logo6;
+    display: none;
+}
+
+@media (min-width: $mobileLargeWidth) {
+    .logoGrid__container {
+        grid-template-areas: 
+        'logo1 logo2 logo3 logo4';
+    }
+ }
+
+@media (min-width: $mediumWidth) {
+    .logoGrid__container {
+        grid-template-areas: 
+        'logo1 logo2 logo3 logo4 logo5 logo6';
+    }
+
+    .logoGrid__viewport {
+        @include medium-max-width;
+    }
+
+    .logoGrid {
+        //@include desktop-section-setting;
+    }
+
+    .logoGrid__logo5 {
+        grid-area: logo5;
+        display: block;
+    }
+    .logoGrid__logo6 {
+        grid-area: logo6;
+        display: block;
+    }
+ }

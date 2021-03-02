@@ -31,7 +31,7 @@ class Feature extends React.Component {
                     />      
                 </div>
                 <div className="feature__details">
-                    <h3 className="feature__headline">{this.props.headline}</h3>
+                    <h4 className="feature__headline">{this.props.headline}</h4>
                     <p className="feature__description">{this.props.copy}</p>
                     <div className="feature__button">
                         <Button 

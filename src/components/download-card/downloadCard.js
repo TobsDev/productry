@@ -29,7 +29,7 @@ function DownloadCard (props) {
 
     // configuring the modal
     const [modal, setModal] = useState(false)
-    const toggleVisibility = () => setModal(!modal)
+    const toggleModal = () => setModal(!modal)
 
     // setting images
     let logos = [luexLogo, luexLogo, luexLogo];
@@ -37,14 +37,13 @@ function DownloadCard (props) {
 
     // JSX
     return (
-        <div className={`downloadCard ${modal ? "downloadCard--modal" : ``}`} onClick={toggleVisibility} >
+        <div className={`downloadCard ${modal ? "downloadCard--modal" : null}`}  >
             <Img 
                 alt="some description" 
                 className="downloadCard__image"
                 fluid={data.allImageSharp.edges[0].node.fluid}
                 backgroundColor
             />
-    {/*<img src={logo} alt="" className="downloadCard__logo" />*/}
             <div className="downloadCard__content">
                 <h5 className="downloadCard__title">{props.name}</h5>
                 <p className="downloadCard__version">{props.minVersion}</p>
@@ -62,7 +61,7 @@ function DownloadCard (props) {
                     src={close} 
                     alt="close nav" 
                     className="downloadCard__header__close"
-                    onClick={toggleVisibility}
+                    onClick={toggleModal}
                 />
             </div>
         </div>

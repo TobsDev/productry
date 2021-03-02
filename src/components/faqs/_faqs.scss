@@ -1,16 +1,20 @@
 @import '../../base/variables';
+@import '../../base/colors';
 
 .faqs {
     grid-area: faqs;
+    background-color: $very-light-blue;
+    @include top-bottom-padding;
 }
 
 .faqs__description {
     padding-bottom: 2.5rem;
-    @include mobile-max-width;
+    
 }
 
 .faqs__viewport {
     @include mobile-section-setting;
+    @include mobile-max-width;
     padding-bottom: 6.5rem;
 }
 

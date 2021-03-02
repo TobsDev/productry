@@ -18,7 +18,7 @@
 }
 
 @media (min-width: calc(#{$mediumWidth} + 150px)) {
-    .team__list {
+    .team__members {
         display: flex;
         
     }
@@ -31,7 +31,7 @@
 }
 
 @media (min-width: calc(#{$mediumWidth} + 150px)) {
-    .team__list {
+    .team__members {
         display: flex;
         
     }

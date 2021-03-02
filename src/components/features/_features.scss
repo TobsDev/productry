@@ -13,9 +13,6 @@
 }
 
 .features__copy {
-    //max-width: 17rem;
-    //margin-left: auto;
-    //margin-right: auto;
     margin-bottom: 1.25rem;
     max-width: $mediumWidth;
     color: white;
@@ -83,10 +80,6 @@
         grid-template-areas: 
             'features'
             'feature';
-    }
-
-    .features {
-        margin: 5rem auto 0 auto    ;
     }
 
     .features__overview {
