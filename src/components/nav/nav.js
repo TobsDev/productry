@@ -1,22 +1,19 @@
-import React, { useState } from 'react';
-import Button from '../button/button';
+import React from 'react';
 import close from '../../images/icon-close_black.svg'
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 import LangSwitch from '../langSwitcher/langSwitcher'
 
-function Nav (props) {
-
-    const { navToggle } = props
+function Nav ({ navToggle, navState, sections }) {
 
     return(
-        <div className={`nav nav--${!props.navState ? 'inactive' : ''}`}>
+        <div className={`nav nav--${navState ? 'inactive' : ''}`}>
             <LangSwitch 
                 activeLang="en"
                 className="nav__langSwitch"
             />  
             <div className="nav__content">
                 <ul className="nav__links">
-                    {props.sections.map((section) => {
+                    {sections.map((section) => {
                         return (
                             <div key={section.id}>
                                 <li className="nav__linkItem" id={section.id} onClick={navToggle}>

@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import window from 'global'
+
+// change module as itsomehow breaks the build
 import useScrollPosition from '@react-hook/window-scroll'
 
 

@@ -6,10 +6,23 @@
     grid-area: downloads;
     @include top-bottom-padding;
     background-color: $very-light-blue;
+    max-width: 100vw;
 }
 
 .downloads__viewport {
     @include mobile-section-setting;
+}
+
+.swiper-slide {
+    max-width: 25rem;
+}
+
+.swiper-container {
+    padding-bottom: 3rem;
+}
+
+.swiper-pagination {
+
 }
 
 .downloads__description {
@@ -24,8 +37,7 @@
     }
 
     .downloads__viewport {
-        @include desktop-section-setting;
+        //@include desktop-section-setting;
         align-items: center;
-        max-width: 980px;
     }
 }

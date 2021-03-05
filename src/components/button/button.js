@@ -1,9 +1,8 @@
 import React from 'react';
-import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 const Button = (props) => (
     
-    <button className="button">
+    <button className={`button ${props.className}`}>
         { props.children ? props.children : props.cta }
     </button>
 )

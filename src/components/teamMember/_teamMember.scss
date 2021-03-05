@@ -8,11 +8,16 @@
 }
 
 .teamMember__content {
-    @include mobile-section-setting;
-    width: auto;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
+    padding: 1.5rem;
+    
+    margin: 0 1rem;
     background-color: $light-gray;
+    grid-area: "content";
+    direction:ltr;
+}
+
+.teamMember__title {
+    margin-top: 0;
 }
 
 .teamMember__button {
@@ -22,16 +27,17 @@
 .teamMember__image {
     max-width: 100%;
     max-height: 100%;
-    bottom: 0;
-    left: 0;
+    //bottom: 0;
+    //left: 0;
     margin: 0 0 2rem 0;
     overflow: auto;
-    position: fixed;
-    right: 0;
-    top: 0;
+    //position: fixed;
+    //right: 0;
+    //top: 0;
     -o-object-fit: contain;
     object-fit: contain;
     margin: 0 1rem;
+    grid-area: "picture";
 }
 
 .teamMember__description {
@@ -88,8 +94,50 @@
     margin-top: 5rem;
 }
 
-@media (min-width: $mediumWidth) {
+@media (min-width: $mobileLargeWidth) {
     .teamMember {
-        max-width: 280px;
+        display: grid;
+        grid-template-areas: "picture content";
+        grid-template-columns: repeat(2, 1fr);
+        max-width: $mediumWidth;
+    }
+
+    .teamMember__content { 
+        background-color: white;
+        max-width: #{$mobileLargeWidth / 2};
+    }
+
+    .teamMember--reverse {
+        direction: rtl;
+    }
+
+    .teamMember__content, .teamMember__image {
+        //width: 50vw;
+        //max-width: calc(600px / 2);
+        margin: 0;
+    }
+
+    .teamMember__image {
+        justify-self: end;
+        width: inherit;
+    }
+
+    .teamMember__content {
+        padding-top: 0;
+    }
+    
+    .teamMember__socialLinks {
+        position: relative;
+        bottom: 1.5rem;
+    }
+}
+
+@media (min-width: $desktopViewport) {
+    .teamMember {
+        max-width: $mobileWidth;
+    }
+
+    .teamMember--reverse {
+        direction: ltr;
     }
 }

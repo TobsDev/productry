@@ -5,13 +5,14 @@
     box-shadow: $md-box-shadow;
     border-radius: 0rem;
     position: relative;
-    @include mobile-max-width;
-    margin-bottom: 2rem;
+    max-width: 25rem;
+    margin: 0 auto;
     cursor: pointer;
 }
 
 .downloadCard__content {
     padding: 1rem;
+    height: 10rem;
 }
 
 .downloadCard__button {
@@ -32,7 +33,7 @@
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 5;
+    -webkit-line-clamp: 3;
 }
 
 .downloadCard--modal .downloadCard__version {

@@ -25,7 +25,7 @@ class Faqs extends React.Component {
             <div className="faqs" id="faqs">
                 <div className="faqs__viewport">
                     <h2 className="faqs__title">Frequentl Asked Questions</h2>
-                    <h3 className="faqs__title">How we work</h3>
+                    <h3 className="faqs__headline">How we work</h3>
                     <p className="faqs__description">Here are some of our FAQs. If you have any other questions you'd like answered please feel free to email us.</p>
                     <ul className="faqs__modal-list">
                         {faqs.map((faq, index) => {

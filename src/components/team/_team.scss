@@ -10,35 +10,33 @@
 
 .team__viewport {
     @include mobile-section-setting;
+    margin: 0 auto;
 }
 
 .team__description {
     padding-bottom: 1.5rem;
-    @include mobile-max-width;
+    //@include mobile-max-width;
 }
 
-@media (min-width: calc(#{$mediumWidth} + 150px)) {
+@media (min-width: $mobileLargeWidth) {
     .team__members {
         display: flex;
-        
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        max-width: $desktopViewport;
+        margin: 0 auto;
+        gap: 1rem;
     }
 
     .team__viewport {
         @include desktop-section-setting;
         align-items: center;
-        max-width: 980px;
+        max-width: $mediumWidth;
     }
 }
 
-@media (min-width: calc(#{$mediumWidth} + 150px)) {
+@media (min-width: $mobileLargeWidth) {
     .team__members {
-        display: flex;
-        
-    }
-
-    .team__viewport {
-        @include desktop-section-setting;
-        align-items: center;
-        max-width: 980px;
+        max-width: $desktopLarge;
     }
 }

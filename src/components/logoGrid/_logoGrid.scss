@@ -52,6 +52,7 @@
     .logoGrid__container {
         grid-template-areas: 
         'logo1 logo2 logo3 logo4';
+        grid-gap: 6rem;
     }
  }
 

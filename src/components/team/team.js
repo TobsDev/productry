@@ -17,11 +17,11 @@ function Team() {
                     return(
                         <TeamMember 
                             key={teamMember.id}
-                            id={teamMember.id}
+                            id={index}
                             name={`${teamMember.name}`}
                             description={`Minimum version ${teamMember.description}`}
                             linkedIn={teamMember.linkedIn}
-                            gridArea={index}
+                            reverse={(index % 2 != 0) ? true : false}
                         />
                     );
                 })}
