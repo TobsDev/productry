@@ -13,9 +13,9 @@ class Question extends React.Component {
         return(
             <div className="question">
                 <div className="question__head" onClick={toggleAnswer}>
-                
+                    <sup className="question__number">{this.props.number + " "}</sup>
                     <h4 className="question__title">
-                        <sup className="question__number">{this.props.number + " "}</sup>        
+                               
                         {this.props.question}</h4>
                     <div className="question__arrow">
                         <img src={arrow} alt=""/>

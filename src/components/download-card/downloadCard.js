@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Button from '../button/button';
 import luexLogo from '../../images/case-images/luex.png'
 import close from '../../images/icon-close_black.svg'
@@ -37,7 +37,7 @@ function DownloadCard (props) {
 
     // JSX
     return (
-        <div className={`downloadCard ${modal ? "downloadCard--modal" : null}`}  >
+        <div className={`downloadCard ${modal ? "downloadCard--modal" : ""}`} onClick={toggleModal} >
             <Img 
                 alt="some description" 
                 className="downloadCard__image"

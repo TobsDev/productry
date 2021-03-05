@@ -13,7 +13,7 @@
 }
 
 .features__copy {
-    margin-bottom: 1.25rem;
+    margin-bottom: 3rem;
     max-width: $mediumWidth;
     color: white;
 }
@@ -33,7 +33,7 @@
 
  .features__item-container::after {
     content: '';
-    background-color: transparentize(black, 0.8);
+    background-color: transparentize(white, 0.5);
     padding: 0;
     display: block;
     bottom: 0;
@@ -45,7 +45,7 @@
 
  .features__list::before {
     content: '';
-    background-color: transparentize(black, 0.8);
+    background-color: transparentize(white, 0.5);
     padding: 0;
     display: block;
     position: absolute;
@@ -62,7 +62,7 @@
 
 .features__item--active::after {
     content: '';
-    background-color: transparentize($cerise, 0.2);
+    background-color: transparentize($cerise, 0.1);
     padding: 0;
     display: block;
     position: absolute;
@@ -71,7 +71,7 @@
     right: 0;
     margin: auto;
     width: 8rem;
-    height: 2px;
+    height: 3px;
 }
 
 @media (min-width: $mediumWidth) {
@@ -80,6 +80,7 @@
         grid-template-areas: 
             'features'
             'feature';
+        margin: 0 auto;
     }
 
     .features__overview {
@@ -115,7 +116,7 @@
 
     .features__overview::after {
         content: '';
-        background-color: transparentize(black, 0.8);
+        background-color: transparentize(white, 0.5);
         padding: 0;
         display: block;
         position: absolute;

@@ -29,8 +29,11 @@
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-fullscreen-crossbrowser": "^1.1.0",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.1.0",
+    "sal.js": "^0.8.4",
+    "simple-react-lightbox": "^3.6.3",
     "styled-components": "^5.2.1",
     "swiper": "^6.4.15"
   },

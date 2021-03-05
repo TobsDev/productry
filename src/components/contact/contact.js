@@ -1,11 +1,21 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Button from '../button/button';
-import { useFormik } from 'formik';
+import { useFormik, useFormikContext } from 'formik';
+import formBackground from './contact_background.svg'
 //import contactBackground from '../../images/contact_background.svg'
 import { FaCity, FaEnvelope, FaPhoneAlt, FaPhoneSquareAlt, FaPortrait, FaRegPaperPlane } from 'react-icons/fa'
 
 function Contact(props) {
 
+    const formRef = useRef() 
+    const handleSubmit = () => { 
+        if (formRef.current) { 
+            formRef.current.handleSubmit() 
+        } 
+        console.log('handleSubmit fired')
+    }
+
+    
     const formik = useFormik({
         initialValues: {
             name: '',
@@ -25,11 +35,15 @@ function Contact(props) {
             <div className="contact__viewport">
                 <h2 className="contact__headline">Wanna get in touch? We’re happy to hear from you</h2>
                 <h3 className="contact__title">contact</h3>
-                <div className="contact__formBackground" >
+            </div>
+            <div className="contact__formBackground">
                     <form 
                         onSubmit={formik.handleSubmit} 
                         className="contact__form" 
-                        >    
+                        id="contact_form"
+                        ref={formRef}
+                        > 
+                        <div className="contact__form--left">
                             <label className="contact__form__label">
                                 <FaPortrait 
                                     style={{ fill: "#293241" }}
@@ -92,6 +106,8 @@ function Contact(props) {
                                     placeholder="Company"
                                 />
                             </label>
+                        </div>
+                        <div className="contact__form--right">
                             <label className="contact__form__label">
                                 <FaRegPaperPlane 
                                     style={{ fill: "#293241" }}
@@ -110,26 +126,30 @@ function Contact(props) {
                                     Your message
                                 </textarea>
                             </label>
-                            <label className="contact__form__label">
-                                <input
-                                    id="consent"
-                                    name="consent"
-                                    type="checkbox"
-                                    onChange={formik.handleChange}
-                                    value={formik.values.consent}
-                                    className=" contact__consent"
-                                    placeholder="consent"
-                                />
-                                consent
-                            </label>
-                        <Button 
-                            type="submit"
-                            className="contact__button"
-                            cta="Contact Us"
-                        />
+                        </div>
+                        <label className="contact__form__label contact__consent">
+                            <input
+                                id="consent"
+                                name="consent"
+                                type="checkbox"
+                                onChange={formik.handleChange}
+                                value={formik.values.consent}
+                                className=" "
+                                placeholder="consent"
+                            />
+                            consent
+                        </label>
+                        
                     </form>
+                    
                 </div>
-            </div>
+                <Button 
+                    type="submit"
+                    className="contact__button"
+                    cta="Contact Us"
+                    form="contact_form"
+                    onclick={() => handleSubmit}
+                />
         </div>
     );
 }

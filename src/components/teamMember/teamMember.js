@@ -29,7 +29,7 @@ function TeamMember(props) {
       }`) 
 
     return (
-        <div className="teamMember" style={{gridArea: props.gridArea}}>
+        <div className={`teamMember ${props.reverse ? "teamMember--reverse" : ""}`} style={{gridArea: props.gridArea}} id={props.id}>
             <Img 
                 alt="some description" 
                 className="teamMember__image"

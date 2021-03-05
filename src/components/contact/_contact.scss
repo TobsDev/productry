@@ -2,12 +2,13 @@
 @import '../../base/colors';
 
 .contact {
-    @include mobile-section-setting;
+
     padding-top: 3.5rem;
     padding-bottom: 3.5rem;
     background-color: $toned-done-yellow;
     color: $light-gray;
     grid-area: contact;
+    
 }
 
 .contact__viewport {
@@ -16,35 +17,38 @@
 
 .contact__form {
     @include mobile-max-width;
-    background-image: url("/contact_background.svg") no-repeat;
-    background-size: cover;
+    @include top-bottom-padding;
+    @include left-right-padding;
+    //width: auto;
+    position: relative;
+    
+
 }
 
 .contact__headline {
-    
+    @include mobile-section-setting;
 }
 
 .contact__title {
+    @include mobile-section-setting;
     color: $cerise;
     margin-bottom: 2rem;
     margin-top: 0.5rem;
     font-weight: $extra-light;
+
 }
 
 .contact__formBackground {
-    //position: absolute;
-    //left: 0;
-    //width: 100%;
-    //background-size: cover;
-    padding-bottom: 2rem;
-    padding-bottom: 2rem;
+    background-color: white;
+    clip-path: polygon(0 0, 100% 5%, 100% 85%, 0% 95%);
     
 }
 
 .contact__button {
-    //font-size: scaledFont($scaling-factor-small, 1);
-    width: 100%;
+    @include mobile-max-width;
+    width: 80%;
     margin-top: 1rem;
+    grid-area: contact;
 }
 
 .contact__form__label {
@@ -61,11 +65,9 @@
 
 .contact__consent {
     width: auto;
-    padding: 0.6rem 2rem;
     border-radius: 4px;
     font-size: 0.8rem;
-    border: 1px solid;
-    margin: 0 1rem 1rem 0;
+    grid-area: consent;
 }
 
 .contact__input {
@@ -73,9 +75,10 @@
     padding: 0.6rem 2rem;
     border-radius: 4px;
     font-size: 0.8rem;
-    border: 1px solid;
+    border: 0px solid;
     margin-bottom: 1rem;
-    border-color: $light-gray;
+    background-color: #fffff7;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -1px rgb(0 0 0 / 6%);
 }
 
 .contact__message {
@@ -88,12 +91,33 @@
 
 @media (min-width: $mediumWidth) {
     .contact__input {
-        width: 300px;
-        margin-right: 0.75rem;
+        
     }
 
-    .contact__button {
-        width: 127px;
+    .contact__form {
+        max-width: $mediumWidth;
+        grid-auto-columns: 1fr;
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-areas: 
+            "left left left right right right right right"
+            "consent consent consent consent consent consent consent consent"
+            "contact contact contact contact contact contact contact contact";
+    }
+
+    .contact__form--left {
+        grid-area: left;
+    }
+
+    .contact__form--right {
+        grid-area: right;
+    }
+
+    .contact__input {
+    }
+
+    .contact__message {
+        height: 16em;
     }
 
     .contact__title {

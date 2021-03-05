@@ -18,7 +18,23 @@
     padding-bottom: 6.5rem;
 }
 
+
+
 .faqs__modal-list {
     padding-bottom: 2rem;
     @include mobile-max-width;
+}
+
+@media (min-width: $mediumWidth) {
+    .faqs__modal-list {
+        max-width: $desktopViewport;
+    }
+
+    .faqs__title, .faqs__headline {
+        max-width: $mediumWidth;
+    }
+
+    .faqs__viewport {
+        max-width: $desktopViewport;
+    }
 }
