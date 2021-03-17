@@ -2,6 +2,7 @@ import React from 'react';
 import Question from '../question/question';
 import Button from '../button/button';
 import faqs from '../../content/faqs.json';
+import { motion } from 'framer-motion'
 
 class Faqs extends React.Component {
     constructor(props) {
@@ -30,7 +31,12 @@ class Faqs extends React.Component {
                     <ul className="faqs__modal-list">
                         {faqs.map((faq, index) => {
                             return(
-                                <li className="faqs__list-item" key={faq.id}>
+                                <motion.li 
+                                    className="faqs__list-item" 
+                                    key={faq.id}
+                                    transition={{ duration: 0.2 }}
+                                    whileHover={{ 
+                                        scale: 1.0125}}>
                                     <Question 
                                         number={index + 1}
                                         question={faq.question}
@@ -39,7 +45,7 @@ class Faqs extends React.Component {
                                         toggleAnswer={this.toggleAnswer}
                                         key={faq.id}
                                     />
-                                </li>
+                                </motion.li>
                             );
                         })}
                         

@@ -22,7 +22,7 @@ function LanguageSwitch ({ language, location }) {
                     className={lang === 'en' ? 'languageSwitcher__language--active' : ''}
                     onClick={() => switchLang(lang)}
                 >
-                    en
+                    en 
                 </Link> 
                  | 
                 <Link
@@ -30,7 +30,7 @@ function LanguageSwitch ({ language, location }) {
                     className={lang === 'de' ? 'languageSwitcher__language--active' : ''}
                     onClick={() => switchLang(lang)}
                     >
-                    de
+                     de
                 </Link>
             </div>
 

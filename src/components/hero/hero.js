@@ -1,10 +1,8 @@
 import React from 'react';
 import Button from '../../components/button/button';
-//import heroIllustration from '../../images/illustration-hero.svg';
 import { graphql, useStaticQuery } from 'gatsby';
 import parseMarkdown from '../../utils/markdownParser';
-// import backgroundShape from '../../images/background-shape-long.svg'
-import BackgroundImage from '../../layout/backgroundImage';
+import BackgroundImage from 'gatsby-background-image'
 import Img from "gatsby-image"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 
@@ -33,16 +31,29 @@ query HeroSection {
         }
       }
     },
-    allImageSharp(filter: {id: {eq: "5bcfcff9-4601-5c2d-8442-02e1e702bede"}}) {
+    allImageSharp(filter: {fixed: {src: {regex: "/2244e/"}}}) {
         nodes {
             fixed(fit: COVER) {
-            ...GatsbyImageSharpFixed_withWebp_tracedSVG
-          }
+                ...GatsbyImageSharpFixed_withWebp_tracedSVG
+            }
         }
-      }
+    },
+    background: allImageSharp(filter: {original: {src: {eq: "/static/4685-41127873ed5903d1db23dcb89caecbb3.jpg"}}}) {
+        nodes {
+            original {
+                src
+            }
+            fluid(quality: 100, maxWidth: 500) {
+                ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            }
+        }
+    }
   }`) 
 
-let { page,
+const fluidBackgroundImage = data.background.nodes[0].fluid;
+
+// desctructure page content from query
+const { page,
     name,
     imageurl,
     imagealt,
@@ -56,21 +67,33 @@ let { page,
     useinnav,
     markdowncontent,
     backgroundcolor } = data.allGoogleSheetPagecontentRow.edges[0].node
+   
 
     return (
-        <div className="hero" id="hero" style={{backgroundColor: backgroundcolor}}>
-            <div className="hero__viewport">
-                <div className="hero__illustrationContainer">
-                    <Img 
-                        alt={imagealt} 
-                        className="hero__image--test" 
-                        fixed={data.allImageSharp.nodes[0].fixed}
-                    / >
-                    <a href='https://www.freepik.com/vectors/background'>Background vector created by macrovector - www.freepik.com</a>
-                    
-                </div>
+        <BackgroundImage
+            Tag={name}
+            id={name}
+            fluid={fluidBackgroundImage}
+            className="hero__backgroundImage"
+            backgroundColor={`white`}
+            style={{backgroundSize: 'cover',
+                backgroundPosition: 'bottom center',
+                backgroundRepeat: 'no-repeat'
+              }}>
+            <div className="hero" id="hero">
+                <div className="hero__viewport">
+                    <div className="hero__illustrationContainer">
+                        <Img 
+                            alt={imagealt} 
+                            className="hero__image--test" 
+                            
+                            // fluid={fluidBackgroundImage}
+                        / >
+                        {/* <a href='https://www.freepik.com/vectors/background'>Background vector created by macrovector - www.freepik.com</a> */}
+                    </div>
+                        
                     <div className="hero__markdownContent-container">
-                        <h2 className="hero__subtitle">{subtitle}</h2>
+                        <h2 className='hero__subtitle'>{subtitle}</h2>
                         <h1 className="hero__headline">{title}</h1>
                         <div className="hero__markdownContent" dangerouslySetInnerHTML={{__html: parseMarkdown(markdowncontent)}}></div>
                         <div className="hero__buttons">
@@ -86,7 +109,8 @@ let { page,
                         </div>
                     </div>
                 </div>
-        </div> 
+            </div>
+        </BackgroundImage>
     );
 }
 

@@ -1,19 +1,19 @@
 @import '../../base/variables';
 @import '../../base/colors';
 
-.feature {
+.service {
     transition: all 0.5s ease-in-out;
     
 }
 
-.feature__description {
+.service__description {
     width: 100%;
     margin-bottom: 1.25rem;
     max-width: $mediumWidth;
     color: white;
 }
 
-.feature__background {
+.service__background {
     z-index: -1;
     position: absolute;
     left: -3rem;
@@ -22,51 +22,51 @@
     transform: rotate(180deg);
 }
 
-.feature__illustration-container {
+.service__illustration-container {
     position: relative;
     margin-top: 2.5rem;
     margin-bottom: 4rem;
     grid-area: illustration;
 }
 
-.feature__image {
+.service__image {
     max-width: 100%;
 }
 
-.feature--inactive {
+.service--inactive {
     height: 0px;
     opacity: 0;
 }
 
-.feature__details {
+.service__details {
     grid-area: details;
 }
 
-.feature__button {
+.service__button {
     display: none;
 }
 
 @media (min-width: $mediumWidth) {
-    .feature {
+    .service {
         margin-top: 3rem;
         align-items: center;
-        grid-area: feature;
+        grid-area: service;
         display: grid;
         grid-template-areas: 
             'illustration details';
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .feature__details {
+    .service__details {
         text-align: left;
         margin-left: 6rem;
     }
 
-    .feature__description {
+    .service__description {
         margin-left: 0;
     }
 
-    .feature__button {
+    .service__button {
         display: inline-block;
     }
 }

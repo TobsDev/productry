@@ -1,34 +1,35 @@
 @import '../../base/variables';
 
-.downloadCard {
+.caseStudy {
     width: 100%;
-    box-shadow: $md-box-shadow;
-    border-radius: 0rem;
+    //box-shadow: $md-box-shadow;
+    border-radius: 0.5rem;
     position: relative;
     max-width: 25rem;
     margin: 0 auto;
     cursor: pointer;
+    border: 1px solid #dadce0;
 }
 
-.downloadCard__content {
+.caseStudy__content {
     padding: 1rem;
     height: 10rem;
 }
 
-.downloadCard__button {
+.caseStudy__button {
     width: 100%;
 }
 
-.downloadCard__title {
+.caseStudy__title {
 
 }
 
-.downloadCard__image {
+.caseStudy__image {
     max-width: 100%;
     border-radius: 0rem 0rem 0 0;
 }
 
-.downloadCard__version {
+.caseStudy__content {
     margin-bottom: 3rem;
     overflow: hidden;
     display: -webkit-box;
@@ -36,7 +37,7 @@
     -webkit-line-clamp: 3;
 }
 
-.downloadCard--modal .downloadCard__version {
+.caseStudy--modal .caseStudy__content {
     overflow-y: visible;
     display: block;
     //-webkit-box-orient: vertical;
@@ -44,15 +45,14 @@
 }
 
 
-.downloadCard__line {
+.caseStudy__line {
     position: absolute;
     bottom: 5rem;
     left: 0;
     width: 100%;
 }
 
-.downloadCard--modal {
-    position: fixed;
+.caseStudy--modal {
     background-color: white;
     width: 100%;
     height: 100%;
@@ -63,7 +63,7 @@
     border-radius: 0;
 }
 
-.downloadCard__header {
+.caseStudy__header {
     display: none;
     max-width: $mediumWidth;
     margin: auto;
@@ -72,21 +72,21 @@
     align-items: center;
 }
 
-.downloadCard__cta {
+.caseStudy__cta {
     @include linkCta;
     display: none;    
     text-align: left;
 }
 
-.downloadCard--modal .downloadCard__cta {
+.caseStudy--modal .caseStudy__cta {
     display: block;
 }
 
-.downloadCard--modal .downloadCard__button {
+.caseStudy--modal .caseStudy__button {
     display: none;
 }
 
-.downloadCard--modal .downloadCard__header {
+.caseStudy--modal .caseStudy__header {
     display: flex;
     position: fixed;
     //height: 3rem;
@@ -97,14 +97,14 @@
     z-index: 5;
 }
 
-.downloadCard__header__logo, .downloadCard__header__close {
+.caseStudy__header__logo, .caseStudy__header__close {
     height: auto;
     margin: 0;
     text-transform: uppercase;
 }
 
 @media (min-width: $mediumWidth) {
-    .downloadCard {
+    .caseStudy {
         //max-width: 280px;
     }
 }

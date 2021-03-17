@@ -7,6 +7,7 @@ module.exports = {
     description: `Product Development Representation.`,
     author: `@tobiasrosenberg`,
   },
+  pathPrefix: "/TobsDev",
   flags: {
     THE_FLAG: false
   },
