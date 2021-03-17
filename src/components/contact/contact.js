@@ -7,11 +7,7 @@ import { FaCity, FaEnvelope, FaPhoneAlt, FaPhoneSquareAlt, FaPortrait, FaRegPape
 
 function Contact(props) {
 
-    const formRef = useRef() 
     const handleSubmit = () => { 
-        if (formRef.current) { 
-            formRef.current.handleSubmit() 
-        } 
         console.log('handleSubmit fired')
     }
 
@@ -41,7 +37,6 @@ function Contact(props) {
                         onSubmit={formik.handleSubmit} 
                         className="contact__form" 
                         id="contact_form"
-                        ref={formRef}
                         > 
                         <div className="contact__form--left">
                             <label className="contact__form__label">

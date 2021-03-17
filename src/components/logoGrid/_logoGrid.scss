@@ -4,7 +4,7 @@
 .logoGrid {
     overflow: hidden;
     grid-area: logogrid;
-    background-color: $toned-done-yellow;
+    //background-color: $toned-done-yellow;
     @include top-bottom-padding;
     justify-items: center;
 }
@@ -24,7 +24,15 @@
 }
 
 .logoGrid__heading {
-    text-align: center;
+    text-align: center !important;
+    font-size: scaledFont($scaling-factor-small, 2);
+    @include headline();
+    font-style: normal;
+}
+
+.logoGrid__logo {
+    max-width: 7.5rem;
+    opacity: 0.4;
 }
 
 .logoGrid__logo1 {
@@ -68,6 +76,10 @@
 
     .logoGrid {
         //@include desktop-section-setting;
+    }
+
+    .logoGrid__logo {
+        max-width: 8rem;
     }
 
     .logoGrid__logo5 {

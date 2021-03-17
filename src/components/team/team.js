@@ -1,6 +1,8 @@
 import React from 'react'
 import TeamMember from '../teamMember/teamMember'
 import team from '../../content/team.json';
+import FadeInWhenVisible from '../../utils/fadeInWhenVisible'
+
 
 function Team() {
     return (
@@ -15,14 +17,14 @@ function Team() {
             <div className="team__members">
                 {team.map((teamMember, index) => {
                     return(
-                        <TeamMember 
-                            key={teamMember.id}
-                            id={index}
-                            name={`${teamMember.name}`}
-                            description={`Minimum version ${teamMember.description}`}
-                            linkedIn={teamMember.linkedIn}
-                            reverse={(index % 2 != 0) ? true : false}
-                        />
+                            <TeamMember 
+                                key={teamMember.id}
+                                id={index}
+                                name={`${teamMember.name}`}
+                                description={`Minimum version ${teamMember.description}`}
+                                linkedIn={teamMember.linkedIn}
+                                reverse={(index % 2 != 0) ? true : false}
+                            />
                     );
                 })}
             </div>

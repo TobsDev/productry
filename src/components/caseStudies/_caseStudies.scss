@@ -1,43 +1,56 @@
 @import '../../base/variables';
 @import '../../base/colors';
 
-.downloads {
+.caseStudies {
     padding-bottom: 6.5rem;
-    grid-area: downloads;
+    grid-area: caseStudies;
     @include top-bottom-padding;
     background-color: $very-light-blue;
     max-width: 100vw;
 }
 
-.downloads__viewport {
-    @include mobile-section-setting;
+.caseStudies__viewport {
+    width: 100%;
 }
 
+
+// defining swiper styles here as this is the only place where it's used
 .swiper-slide {
     max-width: 25rem;
 }
 
 .swiper-container {
     padding-bottom: 3rem;
+    height: 33rem;
+    padding-top: 1rem !important;
 }
 
 .swiper-pagination {
 
 }
 
-.downloads__description {
+
+.swiper-button-prev {
+    color: red; 
+  }
+  
+  .swiper-button-next {
+    color: #000; 
+  }
+
+.caseStudies__description {
     padding-bottom: 1.5rem;
     @include mobile-max-width;
 }
 
 @media (min-width: calc(#{$mediumWidth} + 150px)) {
-    .downloads__list {
+    .caseStudies__list {
         display: flex;
+        padding-top: 1rem;
         
     }
 
-    .downloads__viewport {
-        //@include desktop-section-setting;
+    .caseStudies__viewport {
         align-items: center;
     }
 }

@@ -2,10 +2,7 @@ import React from 'react'
 import Img from "gatsby-image"
 import { graphql, useStaticQuery, Link } from 'gatsby'
 import { FaLinkedinIn, FaEnvelope } from 'react-icons/fa'
-
-
-// need to change to linkedin icon
-import close from '../../images/icon-close_black.svg'
+import { motion } from 'framer-motion'
 
 
 function TeamMember(props) {
@@ -30,21 +27,31 @@ function TeamMember(props) {
 
     return (
         <div className={`teamMember ${props.reverse ? "teamMember--reverse" : ""}`} style={{gridArea: props.gridArea}} id={props.id}>
-            <Img 
-                alt="some description" 
-                className="teamMember__image"
-                fluid={data.allImageSharp.edges[0].node.fluid}
-                backgroundColor
-            />
+            <motion.div 
+                className="teamMember__imageContainer"
+                transition={{ duration: 0.2 }}
+                whileHover={{scale: 1.05}}>
+                <Img 
+                    alt="some description" 
+                    className="teamMember__image"
+                    fluid={data.allImageSharp.edges[0].node.fluid}
+                    backgroundColor
+                />
+            </motion.div>
+            
             <div className="teamMember__content">
                 <h5 className="teamMember__title">{props.name}</h5>
                 <p className="teamMember__description">{props.description}</p>
-                <a href={props.linkedIn} className="teamMember__socialLinks">
+                <a 
+                    href={props.linkedIn} 
+                    className="teamMember__socialLinks" 
+                    target="_blank">
                     <FaLinkedinIn 
                         className="teamMember__linkedInIcon"
                         alt={props.name}
                         style={{ fill: "#DB2763" }}
                         size='2rem'
+                        
                     />
                 </a>
             </div>

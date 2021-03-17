@@ -9,10 +9,11 @@ $merriWheather: 'Merriweather';
 
 // Font scaling (see here: https://type-scale.com/)
 $major-third: 1.25;
+$perfect-fourth: 1.333;
 $perfect-fifth: 1.5;
 $golden-ration: 1.618;
 $scaling-factor-small: $major-third;
-$scaling-factor-medium: $major-third;
+$scaling-factor-medium: $perfect-fourth;
 $scaling-factor-large: $golden-ration;
 
 //truncate
@@ -54,13 +55,14 @@ $black: 900;
     text-align: left;
     margin-bottom: 1.5rem;
     margin-top: 1.5rem;
+    line-height: 1em;
 }
 
 h1 {
     font-size: scaledFont($scaling-factor-small, 5);
     text-shadow: 0px 1px 3px #c4c4c4;
     @include headline();
-    line-height: 56px
+
 }
 
 h2 {

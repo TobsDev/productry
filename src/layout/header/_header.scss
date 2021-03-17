@@ -1,4 +1,6 @@
 @import '../../base/variables';
+@import '../../base/colors';
+@import '../../base/typography';
 
 // TODO: change font color depending on current section
 
@@ -60,10 +62,18 @@
 .header__logo {
     display: inline-block;
     float: left;
+    text-transform: uppercase;
+    font-size: scaledFont($scaling-factor-small, 1);
 }
 
 .header__nav {
     display: none;
+}
+
+.header__nav__button {
+    margin-left: 1rem;
+    margin-right: 1.5rem;
+    padding: 0.6rem 1.5rem;
 }
 
 @media (min-width: $mediumWidth) {
@@ -76,6 +86,10 @@
         display: flex;
         justify-content: space-between;
         align-items : center;
+    }
+
+    .header__nav-linkItem--highlight {
+        color: $cerise;
     }
 
     .header__nav-LinkItem--inactive {
@@ -97,6 +111,7 @@
 
     .header__nav-links {
         display: flex;
+        margin-right: 3rem;
     }
 
     .header__nav-link {
@@ -111,7 +126,7 @@
 
     .header__nav__button {
         margin-left: 1rem;
-        margin-right: 2rem;
+        margin-right: 1.5rem;
         padding: 0.6rem 1.5rem;
     }
 

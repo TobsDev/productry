@@ -26,11 +26,15 @@ function Header(props) {
         >
             <div className="header__viewport">
                 <div className="header__items">
-                    <img 
+                    {/* <img 
                         src={logo} 
                         alt="Bookmark Icon" 
                         className={`header__logo ${scrollDir == "down" ? 'header--invisible' : ''}`}
-                    />
+                    /> */}
+                    <div className={`header__logo ${scrollDir == "down" ? 'header--invisible' : ''}`}>
+                        smarto
+                    </div>
+
                     <img 
                         src={open} 
                         alt="open nav" 
@@ -43,25 +47,19 @@ function Header(props) {
                         {navigation.sections.map((section) => {
                             return (
                                 <div key={section.id}>
-                                    <li className="header__nav-linkItem" id={section.id}>
+                                    <li className={`header__nav-linkItem `} id={section.id}>
                                         <AnchorLink 
-                                            className="header__nav-link" 
+                                            className={`header__nav-link ${section.highlight ? `header__nav-linkItem--highlight` : ``}`}
                                             to={section.url}
                                             stripHash
-                                            title={section.name}
-                                        >
-                                            {section.name}>
+                                            title={section.name}>
+                                            {section.name}
                                         </AnchorLink>
                                     </li>
                                 </div>
                             );
                         })}
                     </ul>
-                    <Button 
-                        cta="Contact"
-                        className="header__nav-button"
-                        section="/index#contact"
-                    />
                     <LanguageSwitcher
                         language="de"
                         location={props.location}

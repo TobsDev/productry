@@ -6,7 +6,7 @@ import LangSwitch from '../langSwitcher/langSwitcher'
 function Nav ({ navToggle, navState, sections }) {
 
     return(
-        <div className={`nav nav--${navState ? 'inactive' : ''}`}>
+        <div className={`nav nav--${!navState ? 'inactive' : ''}`}>
             <LangSwitch 
                 activeLang="en"
                 className="nav__langSwitch"

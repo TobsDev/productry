@@ -1,24 +1,24 @@
 @import '../../base/variables';
 @import '../../base/colors';
 
-.features {
+.services {
     overflow: hidden;
-    grid-area: features;
+    grid-area: services;
     @include top-bottom-padding;
     background-color: $gunmetal;
 }
 
-.features__viewport {
+.services__viewport {
     @include mobile-section-setting;
 }
 
-.features__copy {
+.services__copy {
     margin-bottom: 3rem;
     max-width: $mediumWidth;
     color: white;
 }
 
-.features__item {
+.services__item {
     line-height: 3.5rem;
     position: relative;
     cursor: pointer;
@@ -27,11 +27,11 @@
     text-align: center;
 }
 
-.features__list {
+.services__list {
     position: relative;
 }
 
- .features__item-container::after {
+ .services__item-container::after {
     content: '';
     background-color: transparentize(white, 0.5);
     padding: 0;
@@ -43,7 +43,7 @@
     height: 1px;
 } 
 
- .features__list::before {
+ .services__list::before {
     content: '';
     background-color: transparentize(white, 0.5);
     padding: 0;
@@ -56,11 +56,11 @@
     height: 1px;
 } 
 
-.features__item--active {
+.services__item--active {
     font-weight: $bold;
 }
 
-.features__item--active::after {
+.services__item--active::after {
     content: '';
     background-color: transparentize($cerise, 0.1);
     padding: 0;
@@ -75,46 +75,47 @@
 }
 
 @media (min-width: $mediumWidth) {
-    .features__viewport {
+    .services__viewport {
         display: grid;
         grid-template-areas: 
-            'features'
-            'feature';
+            'services'
+            'service';
         margin: 0 auto;
     }
 
-    .features__overview {
+    .services__overview {
         position: relative;
-        grid-area: features;
+        grid-area: services;
+        display: grid;
     }
 
-    .features__viewport {
+    .services__viewport {
         @include desktop-section-setting;
     }
 
-    .features__list {
+    .services__list {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
-    .features__list::before {
+    .services__list::before {
         display: none;
     }
 
-    .features__item-container {
+    .services__item-container {
         flex-basis: 100%;
     }
 
-    .features__item-container::after {
+    .services__item-container::after {
         display: none;
     }
 
-    .features__overview {
+    .services__overview {
         @include medium-max-width;
     }
 
-    .features__overview::after {
+    .services__overview::after {
         content: '';
         background-color: transparentize(white, 0.5);
         padding: 0;
@@ -127,7 +128,7 @@
         height: 1px;
     }
 
-    .features__item--active::after {
+    .services__item--active::after {
         width: 13.5rem;
     }
 

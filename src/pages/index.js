@@ -1,17 +1,15 @@
 import React from 'react'
-import Header from '../layout/header/header'
 import Hero from '../components/hero/hero'
-import Features from '../components/features/features'
-import Downloads from '../components/downloads/download'
-import FAQS from '../components/faqs/faqs'
-import Contact from '../components/contact/contact'
-import Footer from '../layout/footer/footer'
-import TopButton from '../utils/scrollToTop'
+import Services from '../components/services/services'
 import '../scss/main.scss'
 import { graphql, useStaticQuery } from 'gatsby'
 import Layout from '../layout/layout/layout'
 import LogoGrid from '../components/logoGrid/logoGrid'
 import Team from '../components/team/team'
+import CaseStudies from '../components/caseStudies/caseStudies'
+import Contact from '../components/contact/contact'
+import FAQS from '../components/faqs/faqs'
+//import TopButton from '../utils/scrollToTop'
 
 const IndexPage = () => {
 
@@ -30,16 +28,16 @@ const IndexPage = () => {
   let { imageurl, backgroundcolor } = data.allGoogleSheetPagecontentRow.edges[0].node
 
   return(
-    <Layout>
-      <div id="indexPage" className="indexPage">
+    <Layout id="indexPage" className="indexPage">
+      <main className="indexPage" id="indexPage">
         <Hero />
         <LogoGrid />
-        <Features />
-        <Downloads />
+        <Services />
+        <CaseStudies />
         <Team />
         <FAQS />
         <Contact />
-      </div>
+      </main>
     </Layout>
     
   )
