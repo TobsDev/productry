@@ -4,7 +4,6 @@
 .logoGrid {
     overflow: hidden;
     grid-area: logogrid;
-    //background-color: $toned-done-yellow;
     @include top-bottom-padding;
     justify-items: center;
 }
@@ -21,6 +20,7 @@
     grid-gap: 3rem;
     justify-content: space-around;
     padding-top: 1rem;
+    align-items: center;
 }
 
 .logoGrid__heading {

@@ -7,8 +7,11 @@ import { FaCity, FaEnvelope, FaPhoneAlt, FaPhoneSquareAlt, FaPortrait, FaRegPape
 
 function Contact(props) {
 
+    const formRef = useRef();
+    //const myRef = useRef<FormikProps>();
+
     const handleSubmit = () => { 
-        console.log('handleSubmit fired')
+        console.log(`Content of form: ${formRef.current.submit}`)
     }
 
     
@@ -34,9 +37,11 @@ function Contact(props) {
             </div>
             <div className="contact__formBackground">
                     <form 
-                        onSubmit={formik.handleSubmit} 
+                        //onSubmit={formik.handleSubmit} 
                         className="contact__form" 
                         id="contact_form"
+                        //innerRef={myRef} 
+                        //{...formikProps}
                         > 
                         <div className="contact__form--left">
                             <label className="contact__form__label">
@@ -134,16 +139,14 @@ function Contact(props) {
                             />
                             consent
                         </label>
-                        
                     </form>
-                    
                 </div>
                 <Button 
                     type="submit"
                     className="contact__button"
                     cta="Contact Us"
                     form="contact_form"
-                    onclick={() => handleSubmit}
+                    onClick={handleSubmit}
                 />
         </div>
     );
