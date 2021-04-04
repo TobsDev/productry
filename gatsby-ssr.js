@@ -1,7 +1,19 @@
-/**
- * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/ssr-apis/
- */
+import React from "react"
+export const onRenderBody = (
+  { setPreBodyComponents }
+) => {
+    setPreBodyComponents([
+    <script 
+        type="text/javascript" 
+        src='http://crm.trosenberg.com/cache/include/javascript/sugar_grp1.js?v=IsoWeroVJITCjl127pCNJg' 
+        async 
+    />,
+    <script 
+        src="https://www.google.com/recaptcha/api.js"
+        async
+        defer
+    />
+  ])
+}
 
-// You can delete this file if you're not using it
+
