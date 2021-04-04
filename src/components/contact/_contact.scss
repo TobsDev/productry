@@ -54,6 +54,7 @@
 .contact__form__label {
     position: relative;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .contact__form__icon {
@@ -70,6 +71,10 @@
     grid-area: consent;
 }
 
+contact__form-consent {
+    flex: 1;
+}
+
 .contact__input {
     width: 100%;
     padding: 0.6rem 2rem;
@@ -79,6 +84,17 @@
     margin-bottom: 1rem;
     background-color: #fffff7;
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -1px rgb(0 0 0 / 6%);
+}
+
+.contact__input--invalid {
+    border: 1px solid red;
+}
+
+.contact__input-error {
+    color: red;
+    white-space: pre-line;
+    width: 100%;
+    text-align: left;
 }
 
 .contact__message {
