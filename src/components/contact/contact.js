@@ -65,13 +65,13 @@ function Contact(props) {
                         description: '',
                         lawful_basis: false,
                         lawful_basis_source: "website form",
-                        campaign_id: process.env.GATSBY_CAMPAIGN_ID,
+                        campaign_id: process.env.GATSBY_CAMPAIGN_ID_FORM,
                         assigned_user_id: 1, 
                         moduleDir: "Leads",
                         Submit: "Submit"
                     }}
                     onSubmit={ (values) => {
-                        fetch("http://crm.trosenberg.com/index.php?entryPoint=WebToPersonCapture", {
+                        fetch("https://crm.trosenberg.com/index.php?entryPoint=WebToPersonCapture", {
                                 method: 'POST',
                                 mode: "no-cors",
                                 headers: {
